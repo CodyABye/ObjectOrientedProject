@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Group_Project
 {
-    public partial class AddParty : Form
+    public partial class AddServer : Form
     {
-        public AddParty()
+        public AddServer()
         {
             InitializeComponent();
-        }
-
-        private void AddParty_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

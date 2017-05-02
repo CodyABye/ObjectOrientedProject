@@ -1,6 +1,6 @@
 ﻿namespace Group_Project
 {
-    partial class AddParty
+    partial class AddServer
     {
         /// <summary>
         /// Required designer variable.
@@ -31,71 +31,64 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPartyFirstName = new System.Windows.Forms.TextBox();
-            this.txtPartyLastName = new System.Windows.Forms.TextBox();
+            this.txtServerFirstName = new System.Windows.Forms.TextBox();
+            this.txtServerLastName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(303, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(235, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 38);
+            this.label1.Size = new System.Drawing.Size(104, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Parties";
+            this.label1.Text = "Servers";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(240, 135);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(197, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 17);
+            this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "First Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(240, 175);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(197, 146);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 17);
+            this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Last Name";
             // 
-            // txtPartyFirstName
+            // txtServerFirstName
             // 
-            this.txtPartyFirstName.Location = new System.Drawing.Point(396, 135);
-            this.txtPartyFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPartyFirstName.Name = "txtPartyFirstName";
-            this.txtPartyFirstName.Size = new System.Drawing.Size(132, 22);
-            this.txtPartyFirstName.TabIndex = 3;
+            this.txtServerFirstName.Location = new System.Drawing.Point(292, 114);
+            this.txtServerFirstName.Name = "txtServerFirstName";
+            this.txtServerFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtServerFirstName.TabIndex = 3;
             // 
-            // txtPartyLastName
+            // txtServerLastName
             // 
-            this.txtPartyLastName.Location = new System.Drawing.Point(396, 171);
-            this.txtPartyLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPartyLastName.Name = "txtPartyLastName";
-            this.txtPartyLastName.Size = new System.Drawing.Size(132, 22);
-            this.txtPartyLastName.TabIndex = 4;
+            this.txtServerLastName.Location = new System.Drawing.Point(292, 143);
+            this.txtServerLastName.Name = "txtServerLastName";
+            this.txtServerLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtServerLastName.TabIndex = 4;
             // 
-            // AddParty
+            // AddServer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 404);
-            this.Controls.Add(this.txtPartyLastName);
-            this.Controls.Add(this.txtPartyFirstName);
+            this.ClientSize = new System.Drawing.Size(589, 338);
+            this.Controls.Add(this.txtServerLastName);
+            this.Controls.Add(this.txtServerFirstName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "AddParty";
-            this.Text = "AddParty";
-            this.Load += new System.EventHandler(this.AddParty_Load);
+            this.Name = "AddServer";
+            this.Text = "AddServer";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +99,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPartyFirstName;
-        private System.Windows.Forms.TextBox txtPartyLastName;
+        private System.Windows.Forms.TextBox txtServerFirstName;
+        private System.Windows.Forms.TextBox txtServerLastName;
     }
 }

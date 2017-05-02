@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.grpServers = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnServerAssign = new System.Windows.Forms.Button();
             this.btnServerAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,33 +36,20 @@
             this.btnPartiesAssign = new System.Windows.Forms.Button();
             this.btnPartiesAdd = new System.Windows.Forms.Button();
             this.grpTables = new System.Windows.Forms.GroupBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.grpServers.SuspendLayout();
             this.grpParties.SuspendLayout();
-            this.grpTables.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpServers
             // 
-            this.grpServers.Controls.Add(this.listBox1);
             this.grpServers.Controls.Add(this.btnServerAssign);
             this.grpServers.Controls.Add(this.btnServerAdd);
-            this.grpServers.Location = new System.Drawing.Point(764, 65);
+            this.grpServers.Location = new System.Drawing.Point(881, 78);
             this.grpServers.Name = "grpServers";
             this.grpServers.Size = new System.Drawing.Size(270, 247);
             this.grpServers.TabIndex = 0;
             this.grpServers.TabStop = false;
             this.grpServers.Text = "Servers";
-            // 
-            // listBox1
-            // 
-            this.listBox1.AllowDrop = true;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(42, 39);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 2;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btnServerAssign
             // 
@@ -87,10 +73,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(376, 9);
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(375, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(342, 38);
+            this.label1.Size = new System.Drawing.Size(435, 50);
             this.label1.TabIndex = 1;
             this.label1.Text = "Restaurant Program";
             // 
@@ -98,7 +84,7 @@
             // 
             this.grpParties.Controls.Add(this.btnPartiesAssign);
             this.grpParties.Controls.Add(this.btnPartiesAdd);
-            this.grpParties.Location = new System.Drawing.Point(764, 312);
+            this.grpParties.Location = new System.Drawing.Point(881, 325);
             this.grpParties.Name = "grpParties";
             this.grpParties.Size = new System.Drawing.Size(270, 247);
             this.grpParties.TabIndex = 2;
@@ -126,29 +112,18 @@
             // 
             // grpTables
             // 
-            this.grpTables.Controls.Add(this.listBox2);
-            this.grpTables.Location = new System.Drawing.Point(28, 65);
+            this.grpTables.Location = new System.Drawing.Point(39, 78);
             this.grpTables.Name = "grpTables";
-            this.grpTables.Size = new System.Drawing.Size(717, 494);
+            this.grpTables.Size = new System.Drawing.Size(818, 488);
             this.grpTables.TabIndex = 3;
             this.grpTables.TabStop = false;
             this.grpTables.Text = "Tables";
-            // 
-            // listBox2
-            // 
-            this.listBox2.AllowDrop = true;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(557, 39);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 95);
-            this.listBox2.TabIndex = 0;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1068, 584);
+            this.ClientSize = new System.Drawing.Size(1190, 606);
             this.Controls.Add(this.grpTables);
             this.Controls.Add(this.grpParties);
             this.Controls.Add(this.label1);
@@ -158,7 +133,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grpServers.ResumeLayout(false);
             this.grpParties.ResumeLayout(false);
-            this.grpTables.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,8 +148,6 @@
         private System.Windows.Forms.Button btnPartiesAssign;
         private System.Windows.Forms.Button btnPartiesAdd;
         private System.Windows.Forms.GroupBox grpTables;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
     }
 }
 
