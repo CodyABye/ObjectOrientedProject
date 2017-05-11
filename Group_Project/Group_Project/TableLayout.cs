@@ -11,44 +11,48 @@ namespace Group_Project
     class TableLayout
     {
         public List<TablePosition> AllTables { get; set; }
+        private Panel tableBoard;
+        ListBox[,] tableListbox = new ListBox[4, 4];
 
-        public TableLayout()
+        public TableLayout() { }
+
+        public TableLayout(Panel theTableBoard)
         {
-            AllTables = new List<TablePosition>();
-            int xCoor = 6;
-            int yCoor = 19;
-            for(int y=0; y<4; y++)
+            this.TableBoard = theTableBoard;
+        }
+
+        public Panel TableBoard
+        {
+            get { return tableBoard; }
+            set { tableBoard = value; }
+        }
+
+        public void Start()
+        {
+            BuildBoard();
+        }
+
+        private void BuildBoard()
+        {
+            int startTop = 30;
+            int startLeft = 10;
+
+            for (int row = 0; row <= tableListbox.GetUpperBound(0); row++)
             {
-                for(int x=0; x<5; x++)
+                for (int col = 0; col <= tableListbox.GetUpperBound(1); col++)
                 {
-                    TablePosition tabl = new TablePosition(xCoor, yCoor);
-                    AllTables.Add(tabl);
-                    xCoor += 126;
+                    tableListbox[row, col] = new ListBox();
+                    tableListbox[row, col].Location = new System.Drawing.Point(startTop + (col * 175), startLeft + (row * 120));
+                    tableListbox[row, col].Tag = row + ", " + col;
+                    tableListbox[row, col].Height = 120;
+                    tableListbox[row, col].Width = 120;
+                    tableListbox[row, col].Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    tableListbox[row, col].Name = "Table" + 1;
+                    tableBoard.Controls.Add(tableListbox[row, col]);
                 }
-                xCoor = 6;
-                yCoor += 101;
             }
         }
-        
-
-       
-
-        public void addTablePosition(TablePosition tableP)
-        {
-            //try
-            //{
-                AllTables.Add(tableP);
-            //}
-            /*catch
-            {
-                if(tableP.Equals(null))
-                {
-                    MessageBox.Show("Table's null");
-                }
-                MessageBox.Show("Something's not right");
-            }*/
-        }
-
 
     }
 }
+
