@@ -19,7 +19,8 @@ namespace Group_Project
         }
         public TablePosition(int xPosition, int yPosition)
         {
-            
+            this.xPos = xPosition;
+            this.yPos = yPosition;
         }
         public int XPos { get; set; }
         public int YPos { get; set; }
