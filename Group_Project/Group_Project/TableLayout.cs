@@ -10,11 +10,11 @@ namespace Group_Project
 {
     class TableLayout
     {
-        List<TablePosition> allTables = new List<TablePosition>();
+        public List<TablePosition> AllTables { get; set; }
 
         public TableLayout()
         {
-
+            AllTables = new List<TablePosition>();
             int xCoor = 6;
             int yCoor = 19;
             for(int y=0; y<4; y++)
@@ -22,14 +22,14 @@ namespace Group_Project
                 for(int x=0; x<5; x++)
                 {
                     TablePosition tabl = new TablePosition(xCoor, yCoor);
-                    allTables.Add(tabl);
+                    AllTables.Add(tabl);
                     xCoor += 126;
                 }
                 xCoor = 6;
                 yCoor += 101;
             }
         }
-        public List<TablePosition> AllTables { get; set; }
+        
 
        
 
