@@ -30,7 +30,6 @@
         {
             this.grpServers = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.btnServerAssign = new System.Windows.Forms.Button();
             this.btnServerAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grpParties = new System.Windows.Forms.GroupBox();
@@ -38,6 +37,10 @@
             this.btnPartiesAssign = new System.Windows.Forms.Button();
             this.btnPartiesAdd = new System.Windows.Forms.Button();
             this.pnlTables = new System.Windows.Forms.Panel();
+            this.txtpName = new System.Windows.Forms.TextBox();
+            this.txtpSize = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.grpServers.SuspendLayout();
             this.grpParties.SuspendLayout();
             this.SuspendLayout();
@@ -45,11 +48,10 @@
             // grpServers
             // 
             this.grpServers.Controls.Add(this.listBox1);
-            this.grpServers.Controls.Add(this.btnServerAssign);
             this.grpServers.Controls.Add(this.btnServerAdd);
             this.grpServers.Location = new System.Drawing.Point(764, 65);
             this.grpServers.Name = "grpServers";
-            this.grpServers.Size = new System.Drawing.Size(270, 247);
+            this.grpServers.Size = new System.Drawing.Size(270, 197);
             this.grpServers.TabIndex = 0;
             this.grpServers.TabStop = false;
             this.grpServers.Text = "Servers";
@@ -60,22 +62,13 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(7, 19);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(257, 186);
+            this.listBox1.Size = new System.Drawing.Size(257, 134);
             this.listBox1.TabIndex = 2;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // btnServerAssign
-            // 
-            this.btnServerAssign.Location = new System.Drawing.Point(134, 218);
-            this.btnServerAssign.Name = "btnServerAssign";
-            this.btnServerAssign.Size = new System.Drawing.Size(75, 23);
-            this.btnServerAssign.TabIndex = 1;
-            this.btnServerAssign.Text = "Assign";
-            this.btnServerAssign.UseVisualStyleBackColor = true;
-            // 
             // btnServerAdd
             // 
-            this.btnServerAdd.Location = new System.Drawing.Point(52, 218);
+            this.btnServerAdd.Location = new System.Drawing.Point(6, 168);
             this.btnServerAdd.Name = "btnServerAdd";
             this.btnServerAdd.Size = new System.Drawing.Size(75, 23);
             this.btnServerAdd.TabIndex = 0;
@@ -95,15 +88,19 @@
             // 
             // grpParties
             // 
+            this.grpParties.Controls.Add(this.label3);
+            this.grpParties.Controls.Add(this.label2);
+            this.grpParties.Controls.Add(this.txtpSize);
+            this.grpParties.Controls.Add(this.txtpName);
             this.grpParties.Controls.Add(this.listBox2);
             this.grpParties.Controls.Add(this.btnPartiesAssign);
             this.grpParties.Controls.Add(this.btnPartiesAdd);
-            this.grpParties.Location = new System.Drawing.Point(764, 312);
+            this.grpParties.Location = new System.Drawing.Point(764, 268);
             this.grpParties.Name = "grpParties";
-            this.grpParties.Size = new System.Drawing.Size(270, 247);
+            this.grpParties.Size = new System.Drawing.Size(270, 291);
             this.grpParties.TabIndex = 2;
             this.grpParties.TabStop = false;
-            this.grpParties.Text = "Parties";
+            this.grpParties.Text = "Wait List";
             // 
             // listBox2
             // 
@@ -111,21 +108,21 @@
             this.listBox2.Location = new System.Drawing.Point(7, 18);
             this.listBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(257, 186);
+            this.listBox2.Size = new System.Drawing.Size(257, 134);
             this.listBox2.TabIndex = 2;
             // 
             // btnPartiesAssign
             // 
-            this.btnPartiesAssign.Location = new System.Drawing.Point(134, 218);
+            this.btnPartiesAssign.Location = new System.Drawing.Point(125, 221);
             this.btnPartiesAssign.Name = "btnPartiesAssign";
-            this.btnPartiesAssign.Size = new System.Drawing.Size(75, 23);
+            this.btnPartiesAssign.Size = new System.Drawing.Size(110, 23);
             this.btnPartiesAssign.TabIndex = 1;
-            this.btnPartiesAssign.Text = "Assign";
+            this.btnPartiesAssign.Text = "Assign to Table";
             this.btnPartiesAssign.UseVisualStyleBackColor = true;
             // 
             // btnPartiesAdd
             // 
-            this.btnPartiesAdd.Location = new System.Drawing.Point(52, 218);
+            this.btnPartiesAdd.Location = new System.Drawing.Point(31, 221);
             this.btnPartiesAdd.Name = "btnPartiesAdd";
             this.btnPartiesAdd.Size = new System.Drawing.Size(75, 23);
             this.btnPartiesAdd.TabIndex = 0;
@@ -141,6 +138,38 @@
             this.pnlTables.Size = new System.Drawing.Size(693, 488);
             this.pnlTables.TabIndex = 3;
             // 
+            // txtpName
+            // 
+            this.txtpName.Location = new System.Drawing.Point(121, 160);
+            this.txtpName.Name = "txtpName";
+            this.txtpName.Size = new System.Drawing.Size(143, 20);
+            this.txtpName.TabIndex = 3;
+            // 
+            // txtpSize
+            // 
+            this.txtpSize.Location = new System.Drawing.Point(121, 186);
+            this.txtpSize.Name = "txtpSize";
+            this.txtpSize.Size = new System.Drawing.Size(143, 20);
+            this.txtpSize.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 189);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Party size";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 163);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Party name";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +184,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grpServers.ResumeLayout(false);
             this.grpParties.ResumeLayout(false);
+            this.grpParties.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,13 +195,16 @@
         private System.Windows.Forms.GroupBox grpServers;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpParties;
-        private System.Windows.Forms.Button btnServerAssign;
         private System.Windows.Forms.Button btnServerAdd;
         private System.Windows.Forms.Button btnPartiesAssign;
         private System.Windows.Forms.Button btnPartiesAdd;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel pnlTables;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.TextBox txtpName;
+        private System.Windows.Forms.TextBox txtpSize;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -24,10 +24,12 @@ namespace Group_Project
             tl = new TableLayout(pnlTables);
             tl.Start();
 
-            listBox1.Items.Add("Name 1");
-            listBox1.Items.Add("Name 2");
+            listBox1.Items.Add("Jack");
+            listBox1.Items.Add("Sue");
+
+            listBox2.Items.Add("Name 2");
             listBox2.Items.Add("Name 3");
-            listBox2.Items.Add("Name 4");
+
         }
 
         private void BtnServerAdd_Click(object sender, EventArgs e)
@@ -38,9 +40,28 @@ namespace Group_Project
 
         private void BtnPartiesAdd_Click(object sender, EventArgs e)
         {
+            string partyName = txtpName.Text;
             AddParty addParty = new AddParty();
             addParty.Show();
+
+            if (txtpName.Text == "")
+            {
+                MessageBox.Show("Please enter valid input for the name of party");
+                txtpName.Focus();
+            }
+
+            try
+            {
+                int size = int.Parse(txtpSize.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please enter a valid integer for party size");
+                txtpSize.Focus();
+            }
         }
+
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
