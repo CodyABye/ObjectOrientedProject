@@ -20,7 +20,8 @@ namespace Group_Project
         private void Form1_Load(object sender, EventArgs e)
         {
             TableLayout table = new TableLayout();
-            listBox1.Items.Add("Name 1");
+            listBox1.Items.Add("Jack");
+            listBox1.Items.Add("Sue");
             listBox2.Items.Add("Name 2");
             listBox2.Items.Add("Name 3");
         }
@@ -33,8 +34,27 @@ namespace Group_Project
 
         private void BtnPartiesAdd_Click(object sender, EventArgs e)
         {
-            AddParty addParty = new AddParty();
-            addParty.Show();
+            //AddParty addParty = new AddParty();
+            //addParty.Show();
+            string partyName = txtpName.Text;
+
+            if (txtpName.Text == "")
+            {
+                MessageBox.Show("Please enter valid input for the name of party");
+                txtpName.Focus();
+            }
+
+            try
+            {
+                int size = int.Parse(txtpSize.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please enter a valid integer for party size");
+                txtpSize.Focus();
+            }
+
+           
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)

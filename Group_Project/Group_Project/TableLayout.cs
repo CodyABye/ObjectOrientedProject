@@ -31,7 +31,7 @@ namespace Group_Project
 
         public void addTablePosition(TablePosition tableP)
         {
-            AllTables.Add(tableP);
+           // AllTables.Add(tableP);
         }
 
 
