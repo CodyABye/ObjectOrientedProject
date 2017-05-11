@@ -9,9 +9,9 @@ namespace Group_Project
 {
     class TablePosition
     {
-        int xPos;
-        int yPos;
-        string tType;
+        public int XPos { get; set; }
+        public int YPos { get; set; }
+        public string TType { get; set; }
 
         public TablePosition()
         {
@@ -19,10 +19,9 @@ namespace Group_Project
         }
         public TablePosition(int xPosition, int yPosition)
         {
-            
+            this.XPos = xPosition;
+            this.YPos = yPosition;
         }
-        public int XPos { get; set; }
-        public int YPos { get; set; }
-        public string TType { get; set; }
+        
     }
 }
