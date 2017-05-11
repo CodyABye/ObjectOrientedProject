@@ -19,6 +19,7 @@ namespace Group_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            TableLayout table = new TableLayout();
             listBox1.Items.Add("Name 1");
             listBox2.Items.Add("Name 2");
             listBox2.Items.Add("Name 3");

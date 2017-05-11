@@ -38,6 +38,8 @@
             this.btnPartiesAdd = new System.Windows.Forms.Button();
             this.grpTables = new System.Windows.Forms.GroupBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
             this.grpServers.SuspendLayout();
             this.grpParties.SuspendLayout();
             this.grpTables.SuspendLayout();
@@ -126,6 +128,8 @@
             // 
             // grpTables
             // 
+            this.grpTables.Controls.Add(this.listBox4);
+            this.grpTables.Controls.Add(this.listBox3);
             this.grpTables.Controls.Add(this.listBox2);
             this.grpTables.Location = new System.Drawing.Point(28, 65);
             this.grpTables.Name = "grpTables";
@@ -138,11 +142,29 @@
             // 
             this.listBox2.AllowDrop = true;
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(557, 39);
+            this.listBox2.Location = new System.Drawing.Point(132, 19);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(120, 95);
             this.listBox2.TabIndex = 0;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            // 
+            // listBox3
+            // 
+            this.listBox3.AllowDrop = true;
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(6, 120);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(120, 95);
+            this.listBox3.TabIndex = 1;
+            // 
+            // listBox4
+            // 
+            this.listBox4.AllowDrop = true;
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(6, 19);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(120, 95);
+            this.listBox4.TabIndex = 2;
             // 
             // Form1
             // 
@@ -176,6 +198,8 @@
         private System.Windows.Forms.GroupBox grpTables;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ListBox listBox3;
     }
 }
 
