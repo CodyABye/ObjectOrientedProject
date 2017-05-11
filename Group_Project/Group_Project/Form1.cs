@@ -12,6 +12,9 @@ namespace Group_Project
 {
     public partial class Form1 : Form
     {
+        int dailyCustomers = 0;
+
+        TableLayout assignParty = new TableLayout();
         public Form1()
         {
             InitializeComponent();
@@ -27,8 +30,8 @@ namespace Group_Project
             listBox1.Items.Add("Jack");
             listBox1.Items.Add("Sue");
 
-            listBox2.Items.Add("Name 2");
-            listBox2.Items.Add("Name 3");
+            //listBox2.Items.Add("Name 2");
+            //listBox2.Items.Add("Name 3");
 
         }
 
@@ -40,11 +43,15 @@ namespace Group_Project
 
         private void BtnPartiesAdd_Click(object sender, EventArgs e)
         {
-            string partyName = txtpName.Text;
-            AddParty addParty = new AddParty();
-            addParty.Show();
 
-            if (txtpName.Text == "")
+            int size = 0;
+
+
+            string partyName = txtpName.Text;
+            //AddParty addParty = new AddParty();
+            //addParty.Show();
+
+            if (partyName == "")
             {
                 MessageBox.Show("Please enter valid input for the name of party");
                 txtpName.Focus();
@@ -52,13 +59,23 @@ namespace Group_Project
 
             try
             {
-                int size = int.Parse(txtpSize.Text);
+                size = int.Parse(txtpSize.Text);
             }
             catch
             {
                 MessageBox.Show("Please enter a valid integer for party size");
                 txtpSize.Focus();
             }
+
+            dailyCustomers += size;
+
+            string partyWait = partyName + " " + size.ToString();
+
+            listBox2.Items.Add(partyWait);
+
+            txtpName.Clear();
+            txtpSize.Clear();
+
         }
 
 
@@ -85,7 +102,16 @@ namespace Group_Project
 
         private void btnPartiesAssign_Click(object sender, EventArgs e)
         {
+            List<string> party = new List<string>();
 
+            party = listBox2.Items.Add(listBox2.SelectedItem);
+
+            assignParty.Customer_Table(party);
+
+            listBox2.Items.Remove(listBox2.SelectedItem);
+            
         }
+
+        
     }
 }

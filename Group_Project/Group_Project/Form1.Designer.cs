@@ -33,14 +33,14 @@
             this.btnServerAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grpParties = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtpSize = new System.Windows.Forms.TextBox();
+            this.txtpName = new System.Windows.Forms.TextBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.btnPartiesAssign = new System.Windows.Forms.Button();
             this.btnPartiesAdd = new System.Windows.Forms.Button();
             this.pnlTables = new System.Windows.Forms.Panel();
-            this.txtpName = new System.Windows.Forms.TextBox();
-            this.txtpSize = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.grpServers.SuspendLayout();
             this.grpParties.SuspendLayout();
             this.SuspendLayout();
@@ -102,55 +102,14 @@
             this.grpParties.TabStop = false;
             this.grpParties.Text = "Wait List";
             // 
-            // listBox2
+            // label3
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(7, 18);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(257, 134);
-            this.listBox2.TabIndex = 2;
-            // 
-            // btnPartiesAssign
-            // 
-            this.btnPartiesAssign.Location = new System.Drawing.Point(125, 221);
-            this.btnPartiesAssign.Name = "btnPartiesAssign";
-            this.btnPartiesAssign.Size = new System.Drawing.Size(110, 23);
-            this.btnPartiesAssign.TabIndex = 1;
-            this.btnPartiesAssign.Text = "Assign to Table";
-            this.btnPartiesAssign.UseVisualStyleBackColor = true;
-            // 
-            // btnPartiesAdd
-            // 
-            this.btnPartiesAdd.Location = new System.Drawing.Point(31, 221);
-            this.btnPartiesAdd.Name = "btnPartiesAdd";
-            this.btnPartiesAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnPartiesAdd.TabIndex = 0;
-            this.btnPartiesAdd.Text = "Add";
-            this.btnPartiesAdd.UseVisualStyleBackColor = true;
-            this.btnPartiesAdd.Click += new System.EventHandler(this.BtnPartiesAdd_Click);
-            // 
-            // pnlTables
-            // 
-            this.pnlTables.Location = new System.Drawing.Point(38, 65);
-            this.pnlTables.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnlTables.Name = "pnlTables";
-            this.pnlTables.Size = new System.Drawing.Size(693, 488);
-            this.pnlTables.TabIndex = 3;
-            // 
-            // txtpName
-            // 
-            this.txtpName.Location = new System.Drawing.Point(121, 160);
-            this.txtpName.Name = "txtpName";
-            this.txtpName.Size = new System.Drawing.Size(143, 20);
-            this.txtpName.TabIndex = 3;
-            // 
-            // txtpSize
-            // 
-            this.txtpSize.Location = new System.Drawing.Point(121, 186);
-            this.txtpSize.Name = "txtpSize";
-            this.txtpSize.Size = new System.Drawing.Size(143, 20);
-            this.txtpSize.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 163);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Party name";
             // 
             // label2
             // 
@@ -161,14 +120,56 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Party size";
             // 
-            // label3
+            // txtpSize
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 163);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Party name";
+            this.txtpSize.Location = new System.Drawing.Point(121, 186);
+            this.txtpSize.Name = "txtpSize";
+            this.txtpSize.Size = new System.Drawing.Size(143, 20);
+            this.txtpSize.TabIndex = 4;
+            // 
+            // txtpName
+            // 
+            this.txtpName.Location = new System.Drawing.Point(121, 160);
+            this.txtpName.Name = "txtpName";
+            this.txtpName.Size = new System.Drawing.Size(143, 20);
+            this.txtpName.TabIndex = 3;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(7, 18);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(257, 134);
+            this.listBox2.TabIndex = 2;
+            // 
+            // btnPartiesAssign
+            // 
+            this.btnPartiesAssign.Location = new System.Drawing.Point(9, 250);
+            this.btnPartiesAssign.Name = "btnPartiesAssign";
+            this.btnPartiesAssign.Size = new System.Drawing.Size(110, 23);
+            this.btnPartiesAssign.TabIndex = 1;
+            this.btnPartiesAssign.Text = "Assign to Table";
+            this.btnPartiesAssign.UseVisualStyleBackColor = true;
+            this.btnPartiesAssign.Click += new System.EventHandler(this.btnPartiesAssign_Click);
+            // 
+            // btnPartiesAdd
+            // 
+            this.btnPartiesAdd.Location = new System.Drawing.Point(9, 221);
+            this.btnPartiesAdd.Name = "btnPartiesAdd";
+            this.btnPartiesAdd.Size = new System.Drawing.Size(110, 23);
+            this.btnPartiesAdd.TabIndex = 0;
+            this.btnPartiesAdd.Text = "Add to wait list";
+            this.btnPartiesAdd.UseVisualStyleBackColor = true;
+            this.btnPartiesAdd.Click += new System.EventHandler(this.BtnPartiesAdd_Click);
+            // 
+            // pnlTables
+            // 
+            this.pnlTables.Location = new System.Drawing.Point(38, 65);
+            this.pnlTables.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlTables.Name = "pnlTables";
+            this.pnlTables.Size = new System.Drawing.Size(693, 488);
+            this.pnlTables.TabIndex = 3;
             // 
             // Form1
             // 
