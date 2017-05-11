@@ -16,5 +16,10 @@ namespace Group_Project
         {
             InitializeComponent();
         }
+
+        private void AddParty_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
