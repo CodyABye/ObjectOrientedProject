@@ -14,7 +14,7 @@ namespace Group_Project
         private Panel tableBoard;
         public ListBox[,] tableListbox = new ListBox[4, 4];
 
-        Form1 cust_Table = new Form1();
+        //Form1 cust_Table = new Form1();
 
         //GroupBox[,] tableID = new GroupBox[4, 4];
 
@@ -38,13 +38,9 @@ namespace Group_Project
 
         public void Customer_Table(string party)
         {
-            ListBox cust = new ListBox();
-
             string client = party;
 
-            //cust = party;
-
-            tableListbox[1, 1] = cust.Items.Add(client);
+            tableListbox[1, 1].Items.Add(client);
         }
 
         private void BuildBoard()

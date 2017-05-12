@@ -102,9 +102,9 @@ namespace Group_Project
 
         private void btnPartiesAssign_Click(object sender, EventArgs e)
         {
-            List<string> party = new List<string>();
+            
 
-            party = listBox2.Items.Add(listBox2.SelectedItem);
+           string party = (string) listBox2.SelectedItem;
 
             assignParty.Customer_Table(party);
 
