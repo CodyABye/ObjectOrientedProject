@@ -19,10 +19,9 @@ namespace Group_Project
         {
 
         }
-        public Table(int theID, int theCapacity)
+        public Table(int theID)
         {
             this.TableID = theID;
-            this.Capacity = theCapacity;
         }
         
 

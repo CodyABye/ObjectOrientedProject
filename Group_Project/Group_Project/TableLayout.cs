@@ -12,7 +12,8 @@ namespace Group_Project
     {
         public List<Table> AllTables { get; set; }
         private Panel tableBoard;
-        public ListBox[,] tableListbox = new ListBox[4, 4];
+        //public Table[,] tableListbox = new Table[4, 4];
+        public Table[,] TableArray { get; set; }
 
         //Form1 cust_Table = new Form1();
 
@@ -23,6 +24,7 @@ namespace Group_Project
         public TableLayout(Panel theTableBoard)
         {
             this.TableBoard = theTableBoard;
+            this.TableArray = new Table[4, 4];
             /*int id = 0;
             for(int x=0; x<4; x++)
             {
@@ -57,29 +59,29 @@ namespace Group_Project
             int startLeft = 10;
             int tableNum = 0;
 
-            for (int row = 0; row <= tableListbox.GetUpperBound(0); row++)
+            for (int row = 0; row <= TableArray.GetUpperBound(0); row++)
             {
-                for (int col = 0; col <= tableListbox.GetUpperBound(1); col++)
+                for (int col = 0; col <= TableArray.GetUpperBound(1); col++)
                 {
                     tableNum++;
-                    tableListbox[row, col] = new Table();
-                    tableListbox[row, col].Location = new System.Drawing.Point(startTop + (col * 175), startLeft + (row * 120));
-                    tableListbox[row, col].Tag = row + ", " + col;
-                    tableListbox[row, col].Height = 120;
-                    tableListbox[row, col].Width = 120;
-                    tableListbox[row, col].Name = "Table" + 1;
-                    tableListbox[row, col].Items.Add("Table: " + tableNum);
+                    TableArray[row, col] = new Table();
+                    TableArray[row, col].Location = new System.Drawing.Point(startTop + (col * 175), startLeft + (row * 120));
+                    TableArray[row, col].Tag = row + ", " + col;
+                    TableArray[row, col].Height = 120;
+                    TableArray[row, col].Width = 120;
+                    TableArray[row, col].Name = "Table: " + 1;
+                    TableArray[row, col].Items.Add("Table: " + tableNum);
           
-                    tableBoard.Controls.Add(tableListbox[row, col]);
+                    tableBoard.Controls.Add(TableArray[row, col]);
                 }
             }
+            
         }
         public void Customer_Table(Customer party)
         {
-            Customer client = party;
-            //Table tbl = (Table)tableListbox[1, 1];
-            //tbl.AssignCustomer(client);
-            //tbl.Update();
+            Table tbl = TableArray[1, 1];
+            tbl.AssignCustomer(party);
+            tbl.Update();
 
             //tableListbox[1, 1].Items.Add(client);
         }
