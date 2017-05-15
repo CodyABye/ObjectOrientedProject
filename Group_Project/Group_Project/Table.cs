@@ -32,15 +32,16 @@ namespace Group_Project
         }
         /*public void AssignServer(Server serv1)
         {
-            serv = serv1;
+            Serv = serv1;
         }*/
         public void UpdateTable()
         {
             Items.Clear();
-            Items[1] = Capacity;
-            Items[2] = Status;
-            Items[3] = Party;
-            //Items[4] = Serv;
+            Items.Add(Name);
+            Items.Add(Capacity);
+            Items.Add(Status);
+            Items.Add(Party);
+            //Items.Add(Serv);
         }
     }
 }

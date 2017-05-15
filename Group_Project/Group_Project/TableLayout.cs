@@ -55,19 +55,20 @@ namespace Group_Project
         {
             int startTop = 30;
             int startLeft = 10;
+            int tableNum = 0;
 
             for (int row = 0; row <= tableListbox.GetUpperBound(0); row++)
             {
                 for (int col = 0; col <= tableListbox.GetUpperBound(1); col++)
                 {
-
+                    tableNum++;
                     tableListbox[row, col] = new Table();
                     tableListbox[row, col].Location = new System.Drawing.Point(startTop + (col * 175), startLeft + (row * 120));
                     tableListbox[row, col].Tag = row + ", " + col;
                     tableListbox[row, col].Height = 120;
                     tableListbox[row, col].Width = 120;
-                    tableListbox[row, col].Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     tableListbox[row, col].Name = "Table" + 1;
+                    tableListbox[row, col].Items.Add("Table: " + tableNum);
           
                     tableBoard.Controls.Add(tableListbox[row, col]);
                 }
@@ -76,9 +77,9 @@ namespace Group_Project
         public void Customer_Table(Customer party)
         {
             Customer client = party;
-            Table tbl = (Table)tableListbox[1, 1];
-            tbl.AssignCustomer(client);
-            tbl.Update();
+            //Table tbl = (Table)tableListbox[1, 1];
+            //tbl.AssignCustomer(client);
+            //tbl.Update();
 
             //tableListbox[1, 1].Items.Add(client);
         }
