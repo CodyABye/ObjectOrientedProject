@@ -23,7 +23,7 @@ namespace Group_Project
         public TableLayout(Panel theTableBoard)
         {
             this.TableBoard = theTableBoard;
-            int id = 0;
+            /*int id = 0;
             for(int x=0; x<4; x++)
             {
                 for(int y=0; y<4; y++)
@@ -31,7 +31,7 @@ namespace Group_Project
                     AllTables.Add(new Table(id, 10));
                     id++;
                 }
-            }
+            }*/
         }
 
         public Panel TableBoard
@@ -76,8 +76,11 @@ namespace Group_Project
         public void Customer_Table(Customer party)
         {
             Customer client = party;
+            Table tbl = (Table)tableListbox[1, 1];
+            tbl.AssignCustomer(client);
+            tbl.Update();
 
-            tableListbox[1, 1].Items.Add(client);
+            //tableListbox[1, 1].Items.Add(client);
         }
 
     }

@@ -40,6 +40,7 @@ namespace Group_Project
             Items[1] = Capacity;
             Items[2] = Status;
             Items[3] = Party;
+            //Items[4] = Serv;
         }
     }
 }
