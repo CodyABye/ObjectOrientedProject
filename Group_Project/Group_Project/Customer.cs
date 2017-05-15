@@ -15,25 +15,29 @@ namespace Group_Project
     {
         //fields for Customer Class
 
-        string partyName;
-        int iD;
-        int partySize;
+        public int ID { get; set; }
+        public string PartyName { get; set; }
+        public int PartySize { get; set; }
 
         public Customer()
             {
                 //default constructor
             }
 
-        public Customer(string thePName, int theID, int thePSize)
+        public Customer(string thePName, int thePSize)
         {
-            this.partyName = thePName;
-            this.iD = theID;
-            this.partySize = thePSize;
+            this.PartyName = thePName;
+            this.PartySize = thePSize;
         }
 
-        public int ID { get; set; }
-        public string PartyName { get; set; }
-        public int PartySize { get; set; }
+        
+
+        public override string ToString()
+        {
+            string cInfo = PartyName + ": " + PartySize;
+
+            return cInfo;
+        }
 
     }
 }

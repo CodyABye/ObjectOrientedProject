@@ -12,15 +12,17 @@ namespace Group_Project
         public int XPos { get; set; }
         public int YPos { get; set; }
         public string TType { get; set; }
+        public Table aTable { get; set; }
 
         public TablePosition()
         {
 
         }
-        public TablePosition(int xPosition, int yPosition)
+        public TablePosition(int xPosition, int yPosition, Table bTable)
         {
             this.XPos = xPosition;
             this.YPos = yPosition;
+            this.aTable = bTable;
         }
         
     }

@@ -43,7 +43,8 @@ namespace Group_Project
 
         private void BtnPartiesAdd_Click(object sender, EventArgs e)
         {
-
+            //create new customer
+            Customer currentParty = new Customer(txtpName.Text, Convert.ToInt32(txtpSize.Text));
             int size = 0;
 
 
@@ -69,9 +70,11 @@ namespace Group_Project
 
             dailyCustomers += size;
 
+            //create new Customer object here. Can add objects to listbox
             string partyWait = partyName + " " + size.ToString();
-
-            listBox2.Items.Add(partyWait);
+            
+            //add Customer object to listbox
+            listBox2.Items.Add(currentParty);
 
             txtpName.Clear();
             txtpSize.Clear();
@@ -102,9 +105,7 @@ namespace Group_Project
 
         private void btnPartiesAssign_Click(object sender, EventArgs e)
         {
-            
-
-           string party = (string) listBox2.SelectedItem;
+            string party = (string) listBox2.SelectedItem;
 
             assignParty.Customer_Table(party);
 

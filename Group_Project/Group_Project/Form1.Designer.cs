@@ -168,7 +168,7 @@
             this.pnlTables.Location = new System.Drawing.Point(38, 65);
             this.pnlTables.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTables.Name = "pnlTables";
-            this.pnlTables.Size = new System.Drawing.Size(693, 488);
+            this.pnlTables.Size = new System.Drawing.Size(693, 494);
             this.pnlTables.TabIndex = 3;
             // 
             // Form1
