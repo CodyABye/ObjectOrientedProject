@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grpServers = new System.Windows.Forms.GroupBox();
+            this.btnAssignServer = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnServerAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             // 
             // grpServers
             // 
+            this.grpServers.Controls.Add(this.btnAssignServer);
             this.grpServers.Controls.Add(this.listBox1);
             this.grpServers.Controls.Add(this.btnServerAdd);
             this.grpServers.Location = new System.Drawing.Point(764, 65);
@@ -55,6 +57,16 @@
             this.grpServers.TabIndex = 0;
             this.grpServers.TabStop = false;
             this.grpServers.Text = "Servers";
+            // 
+            // btnAssignServer
+            // 
+            this.btnAssignServer.Location = new System.Drawing.Point(151, 168);
+            this.btnAssignServer.Name = "btnAssignServer";
+            this.btnAssignServer.Size = new System.Drawing.Size(113, 23);
+            this.btnAssignServer.TabIndex = 3;
+            this.btnAssignServer.Text = "Assign Server";
+            this.btnAssignServer.UseVisualStyleBackColor = true;
+            this.btnAssignServer.Click += new System.EventHandler(this.btnAssignServer_Click);
             // 
             // listBox1
             // 
@@ -70,9 +82,9 @@
             // 
             this.btnServerAdd.Location = new System.Drawing.Point(6, 168);
             this.btnServerAdd.Name = "btnServerAdd";
-            this.btnServerAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnServerAdd.Size = new System.Drawing.Size(113, 23);
             this.btnServerAdd.TabIndex = 0;
-            this.btnServerAdd.Text = "Add";
+            this.btnServerAdd.Text = "Add New Server";
             this.btnServerAdd.UseVisualStyleBackColor = true;
             this.btnServerAdd.Click += new System.EventHandler(this.BtnServerAdd_Click);
             // 
@@ -206,6 +218,7 @@
         private System.Windows.Forms.TextBox txtpSize;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnAssignServer;
     }
 }
 

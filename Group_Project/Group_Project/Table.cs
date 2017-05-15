@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Group_Project
 {
-    class Table
+    class Table : ListBox
     {
         public int TableID { get; set; }
         public string Status { get; set; }
@@ -33,5 +34,12 @@ namespace Group_Project
         {
             serv = serv1;
         }*/
+        public void UpdateTable()
+        {
+            Items.Clear();
+            Items[1] = Capacity;
+            Items[2] = Status;
+            Items[3] = Party;
+        }
     }
 }

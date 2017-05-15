@@ -10,7 +10,7 @@ namespace Group_Project
 {
     class TableLayout
     {
-        public List<TablePosition> AllTables { get; set; }
+        public List<Table> AllTables { get; set; }
         private Panel tableBoard;
         public ListBox[,] tableListbox = new ListBox[4, 4];
 
@@ -23,6 +23,15 @@ namespace Group_Project
         public TableLayout(Panel theTableBoard)
         {
             this.TableBoard = theTableBoard;
+            int id = 0;
+            for(int x=0; x<4; x++)
+            {
+                for(int y=0; y<4; y++)
+                {
+                    AllTables.Add(new Table(id, 10));
+                    id++;
+                }
+            }
         }
 
         public Panel TableBoard
@@ -34,14 +43,13 @@ namespace Group_Project
         public void Start()
         {
             BuildBoard();
-        }
-
-        public void Customer_Table(string party)
+        }        
+        /*public void Customer_Table(string party)
         {
             string client = party;
 
             tableListbox[1, 1].Items.Add(client);
-        }
+        }*/
 
         private void BuildBoard()
         {
@@ -53,7 +61,7 @@ namespace Group_Project
                 for (int col = 0; col <= tableListbox.GetUpperBound(1); col++)
                 {
 
-                    tableListbox[row, col] = new ListBox();
+                    tableListbox[row, col] = new Table();
                     tableListbox[row, col].Location = new System.Drawing.Point(startTop + (col * 175), startLeft + (row * 120));
                     tableListbox[row, col].Tag = row + ", " + col;
                     tableListbox[row, col].Height = 120;
@@ -64,6 +72,12 @@ namespace Group_Project
                     tableBoard.Controls.Add(tableListbox[row, col]);
                 }
             }
+        }
+        public void Customer_Table(Customer party)
+        {
+            Customer client = party;
+
+            tableListbox[1, 1].Items.Add(client);
         }
 
     }

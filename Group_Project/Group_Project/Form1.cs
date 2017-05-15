@@ -14,7 +14,7 @@ namespace Group_Project
     {
         int dailyCustomers = 0;
 
-        TableLayout assignParty = new TableLayout();
+        TableLayout tLayout = new TableLayout();
         public Form1()
         {
             InitializeComponent();
@@ -98,21 +98,25 @@ namespace Group_Project
             //listBox1.Items.Add(listBox2.SelectedItem);
         }
 
-        private void btnServerAssign_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnPartiesAssign_Click(object sender, EventArgs e)
         {
-            string party = (string) listBox2.SelectedItem;
+            Customer party = (Customer)listBox2.SelectedItem;
 
-            assignParty.Customer_Table(party);
+            tLayout.Customer_Table(party);
 
             listBox2.Items.Remove(listBox2.SelectedItem);
             
         }
 
-        
+        private void btnAssignServer_Click(object sender, EventArgs e)
+        {
+            Customer party = (Customer)listBox1.SelectedItem;
+
+            //assignServer.Customer_Table(party);
+
+            listBox2.Items.Remove(listBox2.SelectedItem);
+
+        }
     }
 }
