@@ -12,15 +12,16 @@ namespace Group_Project
 {
     public partial class Form1 : Form
     {
-        int dailyCustomers = 0;
-
-        TableLayout assignParty = new TableLayout();
         public Form1()
         {
             InitializeComponent();
         }
 
         TableLayout tl = null;
+        TableLayout assignParty = new TableLayout();
+
+        int dailyCustomers = 0;
+        string errorMessage = "";
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -44,44 +45,61 @@ namespace Group_Project
         private void BtnPartiesAdd_Click(object sender, EventArgs e)
         {
             //create new customer
-            Customer currentParty = new Customer(txtpName.Text, Convert.ToInt32(txtpSize.Text));
-            int size = 0;
 
+            if ((txtpName.Text == null || txtpName.Text.Trim() == string.Empty))
+            {
+                MessageBox.Show("Please enter the party name.");
+                txtpName.Focus();
+            }
+            else
+            {
+                if (isInt(txtpSize.Text))
+                {
+                    int size = 0;
+                    Customer currentParty = new Customer(txtpName.Text, Convert.ToInt32(txtpSize.Text));
+                    string partyName = txtpName.Text;
 
-            string partyName = txtpName.Text;
+                    size = int.Parse(txtpSize.Text);
+
+                    dailyCustomers += size;
+
+                    //create new Customer object here. Can add objects to listbox
+                    string partyWait = partyName + " " + size.ToString();
+
+                    //add Customer object to listbox
+                    listBox2.Items.Add(currentParty);
+
+                    txtpName.Clear();
+                    txtpSize.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid integer for party size");
+                    txtpSize.Focus();
+                }
+            }
+
             //AddParty addParty = new AddParty();
             //addParty.Show();
 
-            if (partyName == "")
-            {
-                MessageBox.Show("Please enter valid input for the name of party");
-                txtpName.Focus();
-            }
+        }
+
+        private bool isInt(string testString) //tests if test score input is numerical.
+        {
+            bool valid = false;
 
             try
             {
-                size = int.Parse(txtpSize.Text);
+                int testValue = Convert.ToInt16(testString);
+                valid = true;
             }
             catch
             {
-                MessageBox.Show("Please enter a valid integer for party size");
-                txtpSize.Focus();
+                errorMessage += "Please enter a numerical value.\n";
+                valid = false;
             }
-
-            dailyCustomers += size;
-
-            //create new Customer object here. Can add objects to listbox
-            string partyWait = partyName + " " + size.ToString();
-            
-            //add Customer object to listbox
-            listBox2.Items.Add(currentParty);
-
-            txtpName.Clear();
-            txtpSize.Clear();
-
+            return valid;
         }
-
-
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
