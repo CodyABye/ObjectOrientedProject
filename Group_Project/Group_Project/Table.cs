@@ -14,24 +14,28 @@ namespace Group_Project
         public int Capacity { get; set; }
         public Customer Party { get; set; }
         //public Server Serv { get; set; }
+
         public Table()
         {
 
         }
+
         public Table(int theID, int theCapacity)
         {
             this.TableID = theID;
             this.Capacity = theCapacity;
-        }
-        
+        }     
 
         public void AssignCustomer(Customer cust1)
         {
             Party = cust1;
         }
-        /*public void AssignServer(Server serv1)
+
+        /*
+        public void AssignServer(Server serv1)
         {
             serv = serv1;
-        }*/
+        }
+        */
     }
 }

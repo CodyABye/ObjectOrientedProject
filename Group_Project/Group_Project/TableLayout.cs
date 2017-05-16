@@ -11,44 +11,59 @@ namespace Group_Project
     class TableLayout
     {
         public List<TablePosition> AllTables { get; set; }
+        public ListBox[,] tableListbox = new ListBox[4, 4];
+        private Panel tableBoard;
 
-        public TableLayout()
+        //Form1 cust_Table = new Form1();
+        //GroupBox[,] tableID = new GroupBox[4, 4];
+
+        public TableLayout() { }
+
+        public TableLayout(Panel theTableBoard)
         {
-            AllTables = new List<TablePosition>();
-            int xCoor = 6;
-            int yCoor = 19;
-            for(int y=0; y<4; y++)
+            this.TableBoard = theTableBoard;
+        }
+
+        public Panel TableBoard
+        {
+            get { return tableBoard; }
+            set { tableBoard = value; }
+        }
+
+        public void Start()
+        {
+            BuildBoard();
+        }
+
+        public void Customer_Table(string party)
+        {
+            string client = party;
+            tableListbox[1, 1].Items.Add(client);
+        }
+
+        private void BuildBoard()
+        {
+            int startLeft = 30;
+            int startTop = 10;
+            int tableName = 0;
+
+            for (int row = 0; row <= tableListbox.GetUpperBound(0); row++)
             {
-                for(int x=0; x<5; x++)
+                for (int col = 0; col <= tableListbox.GetUpperBound(1); col++)
                 {
-                    TablePosition tabl = new TablePosition(xCoor, yCoor);
-                    AllTables.Add(tabl);
-                    xCoor += 126;
+                    tableListbox[row, col] = new ListBox();
+                    tableListbox[row, col].Location = new System.Drawing.Point(startLeft + (col * 175), startTop + (row * 120));
+                    tableListbox[row, col].Tag = row + ", " + col;
+                    tableListbox[row, col].Height = 90;
+                    tableListbox[row, col].Width = 120;
+                    tableListbox[row, col].Name = "Table " + tableName++;
+                    tableBoard.Controls.Add(tableListbox[row, col]);
                 }
-                xCoor = 6;
-                yCoor += 101;
             }
         }
-        
 
-       
-
-        public void addTablePosition(TablePosition tableP)
-        {
-            //try
-            //{
-                AllTables.Add(tableP);
-            //}
-            /*catch
-            {
-                if(tableP.Equals(null))
-                {
-                    MessageBox.Show("Table's null");
-                }
-                MessageBox.Show("Something's not right");
-            }*/
-        }
 
 
     }
 }
+
