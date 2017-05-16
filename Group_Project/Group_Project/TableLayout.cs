@@ -54,7 +54,7 @@ namespace Group_Project
                     tableListbox[row, col] = new ListBox();
                     tableListbox[row, col].Location = new System.Drawing.Point(startLeft + (col * 175), startTop + (row * 120));
                     tableListbox[row, col].Tag = row + ", " + col;
-                    tableListbox[row, col].Height = 120;
+                    tableListbox[row, col].Height = 90;
                     tableListbox[row, col].Width = 120;
                     tableListbox[row, col].Name = "Table " + tableName++;
                     tableBoard.Controls.Add(tableListbox[row, col]);

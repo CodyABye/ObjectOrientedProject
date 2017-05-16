@@ -28,8 +28,8 @@ namespace Group_Project
             tl = new TableLayout(pnlTables);
             tl.Start();
 
-            listBox1.Items.Add("Jack");
-            listBox1.Items.Add("Sue");
+            lstServers.Items.Add("Jack");
+            lstServers.Items.Add("Sue");
 
             //listBox2.Items.Add("Name 2");
             //listBox2.Items.Add("Name 3");
@@ -67,7 +67,7 @@ namespace Group_Project
                     string partyWait = partyName + " " + size.ToString();
 
                     //add Customer object to listbox
-                    listBox2.Items.Add(currentParty);
+                    lstWaitList.Items.Add(currentParty);
 
                     txtpName.Clear();
                     txtpSize.Clear();
@@ -123,11 +123,11 @@ namespace Group_Project
 
         private void btnPartiesAssign_Click(object sender, EventArgs e)
         {
-            string party = (string) listBox2.SelectedItem;
+            string party = (string) lstWaitList.SelectedItem;
 
             assignParty.Customer_Table(party);
 
-            listBox2.Items.Remove(listBox2.SelectedItem);
+            lstWaitList.Items.Remove(lstWaitList.SelectedItem);
             
         }
 
