@@ -1,0 +1,28 @@
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Group_Project\Group_Project\bin\Debug\Group_Project.exe.config
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Group_Project\Group_Project\bin\Debug\Group_Project.exe
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Group_Project\Group_Project\bin\Debug\Group_Project.pdb
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.csprojResolveAssemblyReference.cache
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.Form1.resources
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.Properties.Resources.resources
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.csproj.GenerateResource.Cache
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.exe
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.pdb
+N:\Speach\Group_Project\Group_Project\bin\Debug\Group_Project.exe.config
+N:\Speach\Group_Project\Group_Project\obj\Debug\Group_Project.exe
+N:\Speach\Group_Project\Group_Project\obj\Debug\Group_Project.pdb
+N:\Object Oriented Analysis & Design\Group_Project\Group_Project\bin\Debug\Group_Project.exe.config
+N:\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.exe
+N:\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.pdb
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.AddParty.resources
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.AddServer.resources
+N:\Object Oriented Analysis & Design\Group_Project\Group_Project\bin\Debug\Group_Project.exe
+N:\Object Oriented Analysis & Design\Group_Project\Group_Project\bin\Debug\Group_Project.pdb
+N:\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.csprojResolveAssemblyReference.cache
+N:\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.AddParty.resources
+N:\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.AddServer.resources
+N:\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.Form1.resources
+N:\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.Properties.Resources.resources
+N:\Object Oriented Analysis & Design\Group_Project\Group_Project\obj\Debug\Group_Project.csproj.GenerateResource.Cache
+C:\Users\jb572555\OneDrive\SCC\OOproject\OOP_Restaurant_Project\Group_Project\Group_Project\Group_Project\bin\Debug\Group_Project.exe.config
+C:\Users\jb572555\OneDrive\SCC\OOproject\OOP_Restaurant_Project\Group_Project\Group_Project\Group_Project\obj\Debug\Group_Project.exe
+C:\Users\jb572555\OneDrive\SCC\OOproject\OOP_Restaurant_Project\Group_Project\Group_Project\Group_Project\obj\Debug\Group_Project.pdb
