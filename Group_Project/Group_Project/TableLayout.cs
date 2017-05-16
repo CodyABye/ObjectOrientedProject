@@ -43,8 +43,8 @@ namespace Group_Project
 
         private void BuildBoard()
         {
-            int startTop = 30;
-            int startLeft = 10;
+            int startLeft = 30;
+            int startTop = 10;
             int tableName = 0;
 
             for (int row = 0; row <= tableListbox.GetUpperBound(0); row++)
@@ -52,16 +52,18 @@ namespace Group_Project
                 for (int col = 0; col <= tableListbox.GetUpperBound(1); col++)
                 {
                     tableListbox[row, col] = new ListBox();
-                    tableListbox[row, col].Location = new System.Drawing.Point(startTop + (col * 175), startLeft + (row * 120));
+                    tableListbox[row, col].Location = new System.Drawing.Point(startLeft + (col * 175), startTop + (row * 120));
                     tableListbox[row, col].Tag = row + ", " + col;
                     tableListbox[row, col].Height = 120;
                     tableListbox[row, col].Width = 120;
-                    tableListbox[row, col].Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     tableListbox[row, col].Name = "Table " + tableName++;
                     tableBoard.Controls.Add(tableListbox[row, col]);
                 }
-            }            
+            }
         }
+
+
+
     }
 }
 
