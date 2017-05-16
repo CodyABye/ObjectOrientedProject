@@ -49,7 +49,6 @@ namespace Group_Project
         /*public void Customer_Table(string party)
         {
             string client = party;
-
             tableListbox[1, 1].Items.Add(client);
         }*/
 
@@ -71,18 +70,16 @@ namespace Group_Project
                     TableArray[row, col].Width = 120;
                     TableArray[row, col].Name = "Table: " + 1;
                     TableArray[row, col].Items.Add("Table: " + tableNum);
-          
+
                     tableBoard.Controls.Add(TableArray[row, col]);
                 }
             }
-            
         }
         public void Customer_Table(Customer party)
         {
             Table tbl = TableArray[1, 1];
             tbl.AssignCustomer(party);
             tbl.Update();
-
             //tableListbox[1, 1].Items.Add(client);
         }
 

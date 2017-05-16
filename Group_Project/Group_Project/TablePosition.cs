@@ -12,7 +12,7 @@ namespace Group_Project
         public int XPos { get; set; }
         public int YPos { get; set; }
         public string TType { get; set; }
-        public Table aTable { get; set; }
+        public Table ATable { get; set; }
 
         public TablePosition()
         {
@@ -22,7 +22,7 @@ namespace Group_Project
         {
             this.XPos = xPosition;
             this.YPos = yPosition;
-            this.aTable = bTable;
+            this.ATable = bTable;
         }
         
     }
