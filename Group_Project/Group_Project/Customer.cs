@@ -34,7 +34,7 @@ namespace Group_Project
 
         public override string ToString()
         {
-            string cInfo = PartyName + ": " + PartySize;
+            string cInfo = "Party: " + PartyName + ", " + PartySize;
 
             return cInfo;
         }

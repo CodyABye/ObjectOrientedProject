@@ -22,7 +22,7 @@ namespace Group_Project
         }
         public override string ToString()
         {
-            return ServName;
+            return "Server: " + ServName;
         }
     }
 }
