@@ -56,7 +56,7 @@ namespace Group_Project
                     tableArray[row, col].Tag = row + ", " + col;
                     tableArray[row, col].Height = 90;
                     tableArray[row, col].Width = 120;
-                    tableArray[row, col].Name = "Table " + tableName++;
+                    tableArray[row, col].Text = "Table " + ++tableName;
                     tableBoard.Controls.Add(tableArray[row, col]);
                     tableArray[row, col].Click += TableLayout_Click;
 
