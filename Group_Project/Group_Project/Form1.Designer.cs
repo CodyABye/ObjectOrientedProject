@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.grpServers = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstServers = new System.Windows.Forms.ListBox();
             this.btnServerAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grpParties = new System.Windows.Forms.GroupBox();
@@ -37,7 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtpSize = new System.Windows.Forms.TextBox();
             this.txtpName = new System.Windows.Forms.TextBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lstWaitList = new System.Windows.Forms.ListBox();
             this.btnPartiesAssign = new System.Windows.Forms.Button();
             this.btnPartiesAdd = new System.Windows.Forms.Button();
             this.pnlTables = new System.Windows.Forms.Panel();
@@ -47,7 +47,7 @@
             // 
             // grpServers
             // 
-            this.grpServers.Controls.Add(this.listBox1);
+            this.grpServers.Controls.Add(this.lstServers);
             this.grpServers.Controls.Add(this.btnServerAdd);
             this.grpServers.Location = new System.Drawing.Point(764, 65);
             this.grpServers.Name = "grpServers";
@@ -56,15 +56,15 @@
             this.grpServers.TabStop = false;
             this.grpServers.Text = "Servers";
             // 
-            // listBox1
+            // lstServers
             // 
-            this.listBox1.AllowDrop = true;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(7, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(257, 134);
-            this.listBox1.TabIndex = 2;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lstServers.AllowDrop = true;
+            this.lstServers.FormattingEnabled = true;
+            this.lstServers.Location = new System.Drawing.Point(7, 19);
+            this.lstServers.Name = "lstServers";
+            this.lstServers.Size = new System.Drawing.Size(257, 134);
+            this.lstServers.TabIndex = 2;
+            this.lstServers.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btnServerAdd
             // 
@@ -92,7 +92,7 @@
             this.grpParties.Controls.Add(this.label2);
             this.grpParties.Controls.Add(this.txtpSize);
             this.grpParties.Controls.Add(this.txtpName);
-            this.grpParties.Controls.Add(this.listBox2);
+            this.grpParties.Controls.Add(this.lstWaitList);
             this.grpParties.Controls.Add(this.btnPartiesAssign);
             this.grpParties.Controls.Add(this.btnPartiesAdd);
             this.grpParties.Location = new System.Drawing.Point(764, 268);
@@ -134,14 +134,14 @@
             this.txtpName.Size = new System.Drawing.Size(143, 20);
             this.txtpName.TabIndex = 3;
             // 
-            // listBox2
+            // lstWaitList
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(7, 18);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(257, 134);
-            this.listBox2.TabIndex = 2;
+            this.lstWaitList.FormattingEnabled = true;
+            this.lstWaitList.Location = new System.Drawing.Point(7, 18);
+            this.lstWaitList.Margin = new System.Windows.Forms.Padding(2);
+            this.lstWaitList.Name = "lstWaitList";
+            this.lstWaitList.Size = new System.Drawing.Size(257, 134);
+            this.lstWaitList.TabIndex = 2;
             // 
             // btnPartiesAssign
             // 
@@ -199,9 +199,9 @@
         private System.Windows.Forms.Button btnServerAdd;
         private System.Windows.Forms.Button btnPartiesAssign;
         private System.Windows.Forms.Button btnPartiesAdd;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstServers;
         private System.Windows.Forms.Panel pnlTables;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox lstWaitList;
         private System.Windows.Forms.TextBox txtpName;
         private System.Windows.Forms.TextBox txtpSize;
         private System.Windows.Forms.Label label3;

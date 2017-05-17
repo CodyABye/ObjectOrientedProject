@@ -78,3 +78,14 @@ C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Clone\Grou
 C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Clone\Group_Project\Group_Project\obj\Debug\Group_Project.csproj.GenerateResource.Cache
 C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Clone\Group_Project\Group_Project\obj\Debug\Group_Project.exe
 C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\Clone\Group_Project\Group_Project\obj\Debug\Group_Project.pdb
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\ObjectOrientedProject\Group_Project\Group_Project\bin\Debug\Group_Project.exe.config
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\ObjectOrientedProject\Group_Project\Group_Project\bin\Debug\Group_Project.exe
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\ObjectOrientedProject\Group_Project\Group_Project\bin\Debug\Group_Project.pdb
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\ObjectOrientedProject\Group_Project\Group_Project\obj\Debug\Group_Project.csprojResolveAssemblyReference.cache
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\ObjectOrientedProject\Group_Project\Group_Project\obj\Debug\Group_Project.AddParty.resources
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\ObjectOrientedProject\Group_Project\Group_Project\obj\Debug\Group_Project.AddServer.resources
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\ObjectOrientedProject\Group_Project\Group_Project\obj\Debug\Group_Project.Form1.resources
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\ObjectOrientedProject\Group_Project\Group_Project\obj\Debug\Group_Project.Properties.Resources.resources
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\ObjectOrientedProject\Group_Project\Group_Project\obj\Debug\Group_Project.csproj.GenerateResource.Cache
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\ObjectOrientedProject\Group_Project\Group_Project\obj\Debug\Group_Project.exe
+C:\Users\Benyamin\Downloads\Courses\Object Oriented Analysis & Design\ObjectOrientedProject\Group_Project\Group_Project\obj\Debug\Group_Project.pdb
