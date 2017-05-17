@@ -20,6 +20,11 @@ namespace Group_Project
         TableLayout tl = null;
         TableLayout assignParty = new TableLayout();
 
+        private string customers = "";
+        private string servers = "";
+        private int partySize = 0;
+        private int tableNum = 0;
+
         int dailyCustomers = 0;
         string errorMessage = "";
 
@@ -30,7 +35,7 @@ namespace Group_Project
 
             lstServers.Items.Add("Jack");
             lstServers.Items.Add("Sue");
-
+            lstServers.SelectedIndex = lstServers.TopIndex;
             //listBox2.Items.Add("Name 2");
             //listBox2.Items.Add("Name 3");
 
@@ -55,17 +60,17 @@ namespace Group_Project
             {
                 if (isInt(txtpSize.Text))
                 {
-                    int size = 0;
+                    partySize = 0;
                     Customer currentParty = new Customer(txtpName.Text, Convert.ToInt32(txtpSize.Text));
                     string partyName = txtpName.Text;
 
-                    size = int.Parse(txtpSize.Text);
+                    partySize = int.Parse(txtpSize.Text);
 
-                    dailyCustomers += size;
+                    dailyCustomers += partySize;
 
-                   
+                    //assignParty.Customer_Table();
                     //create new Customer object here. Can add objects to listbox
-                    string partyWait = partyName + " " + size.ToString();
+                    string partyWait = partyName + " " + partySize.ToString();
 
                     //add Customer object to listbox
                     lstWaitList.Items.Add(partyWait);
@@ -103,9 +108,25 @@ namespace Group_Project
             return valid;
         }
 
+        //private void lstServers_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    string server = (string)lstServers.SelectedItem;
+        //    string customer = (string)lstWaitList.SelectedItem;
+        //    int size = partySize;
+
+        //    assignParty.Customer_Table(customer, server, size);
+
+        //}
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //listBox2.Items.Add(listBox1.SelectedItem);
+
+            string server = (string)lstServers.SelectedItem;
+            string customer = (string)lstWaitList.SelectedItem;
+            int size = partySize;
+
+            assignParty.Customer_Table(customer, server, size);
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)

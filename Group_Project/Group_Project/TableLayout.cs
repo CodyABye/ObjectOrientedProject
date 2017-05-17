@@ -16,9 +16,9 @@ namespace Group_Project
         private string partyTable;
         private string serverTable;
         private int tableNum;
+        private int partySize;
 
-       // Form1 cust_Table = new Form1();
-        //GroupBox[,] tableID = new GroupBox[4, 4];
+           
 
         public TableLayout() { }
 
@@ -71,11 +71,19 @@ namespace Group_Project
             }
         }
 
-        public void Customer_Table(string party, string server, int tableNumber)
+        public void Customer_Table(string party, string server, int tableNumber, int size)
+        {
+            this.partyTable = party;
+            this.serverTable = server;
+            this.tableNum = tableNumber;
+            this.partySize = size;
+        }
+
+        public void Customer_Table(string party, string server, int size)
         {
             partyTable = party;
             serverTable = server;
-            tableNum = tableNumber;
+            partySize = size;
         }
 
         private void TableLayout_Click(object sender, EventArgs e)
