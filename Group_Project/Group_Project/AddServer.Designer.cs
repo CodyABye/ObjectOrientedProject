@@ -86,6 +86,7 @@
             this.btnServerAssign.TabIndex = 5;
             this.btnServerAssign.Text = "Assign Server ";
             this.btnServerAssign.UseVisualStyleBackColor = true;
+            this.btnServerAssign.Click += new System.EventHandler(this.btnServerAssign_Click);
             // 
             // AddServer
             // 

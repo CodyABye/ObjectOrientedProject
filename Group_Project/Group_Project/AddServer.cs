@@ -16,5 +16,10 @@ namespace Group_Project
         {
             InitializeComponent();
         }
+
+        private void btnServerAssign_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
