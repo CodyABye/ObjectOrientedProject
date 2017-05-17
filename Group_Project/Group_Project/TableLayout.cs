@@ -11,7 +11,7 @@ namespace Group_Project
     class TableLayout
     {
         public List<TablePosition> AllTables { get; set; }
-        public ListBox[,] tableListbox = new ListBox[4, 4];
+        public Table[,] tableArray = new Table[4, 4];
         private Panel tableBoard;
 
         //Form1 cust_Table = new Form1();
@@ -38,7 +38,7 @@ namespace Group_Project
         public void Customer_Table(string party)
         {
             string client = party;
-            tableListbox[1, 1].Items.Add(client);
+            //tableListbox[1, 1].Items.Add(client);
         }
 
         private void BuildBoard()
@@ -47,23 +47,27 @@ namespace Group_Project
             int startTop = 10;
             int tableName = 0;
 
-            for (int row = 0; row <= tableListbox.GetUpperBound(0); row++)
+            for (int row = 0; row <= tableArray.GetUpperBound(0); row++)
             {
-                for (int col = 0; col <= tableListbox.GetUpperBound(1); col++)
+                for (int col = 0; col <= tableArray.GetUpperBound(1); col++)
                 {
-                    tableListbox[row, col] = new ListBox();
-                    tableListbox[row, col].Location = new System.Drawing.Point(startLeft + (col * 175), startTop + (row * 120));
-                    tableListbox[row, col].Tag = row + ", " + col;
-                    tableListbox[row, col].Height = 90;
-                    tableListbox[row, col].Width = 120;
-                    tableListbox[row, col].Name = "Table " + tableName++;
-                    tableBoard.Controls.Add(tableListbox[row, col]);
+                    tableArray[row, col] = new Table();
+                    tableArray[row, col].Location = new System.Drawing.Point(startLeft + (col * 175), startTop + (row * 120));
+                    tableArray[row, col].Tag = row + ", " + col;
+                    tableArray[row, col].Height = 90;
+                    tableArray[row, col].Width = 120;
+                    tableArray[row, col].Name = "Table " + tableName++;
+                    tableBoard.Controls.Add(tableArray[row, col]);
+                    tableArray[row, col].Click += TableLayout_Click;
+
                 }
             }
         }
 
-
-
+        private void TableLayout_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
 

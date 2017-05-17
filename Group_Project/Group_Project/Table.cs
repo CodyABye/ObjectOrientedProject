@@ -4,16 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Group_Project
 {
-    class Table
+    class Table : Button
     {
         public int TableID { get; set; }
         public string Status { get; set; }
         public int Capacity { get; set; }
         public Customer Party { get; set; }
-        //public Server Serv { get; set; }
+        public RestServer Serv { get; set; }
 
         public Table()
         {
@@ -31,11 +32,14 @@ namespace Group_Project
             Party = cust1;
         }
 
-        /*
-        public void AssignServer(Server serv1)
+        
+        public void AssignServer(RestServer serv1)
         {
-            serv = serv1;
+            Serv = serv1;
         }
-        */
+        public void Update()
+        {
+            this.Text = Party.ToString() + "\n" + Serv.ToString();
+        }        
     }
 }
