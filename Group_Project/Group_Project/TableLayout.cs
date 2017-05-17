@@ -13,8 +13,11 @@ namespace Group_Project
         public List<TablePosition> AllTables { get; set; }
         public Table[,] tableArray = new Table[4, 4];
         private Panel tableBoard;
+        private string partyTable;
+        private string serverTable;
+        private int tableNum;
 
-        //Form1 cust_Table = new Form1();
+       // Form1 cust_Table = new Form1();
         //GroupBox[,] tableID = new GroupBox[4, 4];
 
         public TableLayout() { }
@@ -24,6 +27,7 @@ namespace Group_Project
             this.TableBoard = theTableBoard;
         }
 
+       
         public Panel TableBoard
         {
             get { return tableBoard; }
@@ -35,17 +39,13 @@ namespace Group_Project
             BuildBoard();
         }
 
-        public void Customer_Table(string party)
-        {
-            string client = party;
-            //tableListbox[1, 1].Items.Add(client);
-        }
+        
 
         private void BuildBoard()
         {
             int startLeft = 30;
             int startTop = 10;
-            int tableName = 0;
+            int tableName = 1;
 
             for (int row = 0; row <= tableArray.GetUpperBound(0); row++)
             {
@@ -53,23 +53,82 @@ namespace Group_Project
                 {
                     tableArray[row, col] = new Table();
                     tableArray[row, col].Location = new System.Drawing.Point(startLeft + (col * 175), startTop + (row * 120));
-                    tableArray[row, col].Tag = row + ", " + col;
+                    tableArray[row, col].Tag = tableName;
                     tableArray[row, col].Height = 90;
                     tableArray[row, col].Width = 120;
-                    tableArray[row, col].Text = "Table " + ++tableName;
+                    tableArray[row, col].Text = "Table " + tableName;
+                    
+
+                    //incremented tableName after assignment of .Tag and .Text so tableName would be the same in both.
+
+                    ++tableName;
+
                     tableBoard.Controls.Add(tableArray[row, col]);
+
                     tableArray[row, col].Click += TableLayout_Click;
 
                 }
             }
         }
 
+        public void Customer_Table(string party, string server, int tableNumber)
+        {
+            partyTable = party;
+            serverTable = server;
+            tableNum = tableNumber;
+        }
+
         private void TableLayout_Click(object sender, EventArgs e)
         {
-            //sender.AssignCustomer(somecustomer);
+            //string customers = " ", servers = " "; 
+
+            //cust_Table.LoadCustInfo(partyTable, serverTable);
+
+            Button newSender = (Button)sender;
+
+            int senderTag = (int)newSender.Tag;
+
+            
+            for (int row = 0; row <= tableArray.GetUpperBound(0); row++)
+            {
+                for (int col = 0; col <= tableArray.GetUpperBound(1); col++)
+                {
+                    if (senderTag == (int)tableArray[row,col].Tag)
+                    {
+                        tableArray[row, col].Text = "Table " + senderTag + "\n" + partyTable + "\n" + serverTable;
+
+                        
+                    }
+                }
+
+            }
+            //sender.AssignCustomer();
             //sender.AssignServer(someserver);
             //sender.TUpdate();
-            
+
+        }
+
+        public void AssignTable(string party ,string server, int tableNumber)
+        {
+            partyTable = party;
+            serverTable = server;
+            tableNum = tableNumber;
+            //Table[,] tArray = new Table[4, 4];
+
+            for (int row = 0; row <= tableArray.GetUpperBound(0); row++)
+            {
+                for (int col = 0; col <= tableArray.GetUpperBound(1); col++)
+                {
+                    if (tableNum == (int)tableArray[row, col].Tag)
+                    {
+                        tableArray[row, col].Text = "Table " + tableNum + "\n" + partyTable + "\n" + serverTable;
+
+
+                    }
+                }
+
+            }
+
         }
     }
 }

@@ -41,6 +41,7 @@
             this.btnPartiesAssign = new System.Windows.Forms.Button();
             this.btnPartiesAdd = new System.Windows.Forms.Button();
             this.pnlTables = new System.Windows.Forms.Panel();
+            this.txtTable = new System.Windows.Forms.TextBox();
             this.grpServers.SuspendLayout();
             this.grpParties.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +89,7 @@
             // 
             // grpParties
             // 
+            this.grpParties.Controls.Add(this.txtTable);
             this.grpParties.Controls.Add(this.label3);
             this.grpParties.Controls.Add(this.label2);
             this.grpParties.Controls.Add(this.txtpSize);
@@ -171,6 +173,13 @@
             this.pnlTables.Size = new System.Drawing.Size(693, 494);
             this.pnlTables.TabIndex = 3;
             // 
+            // txtTable
+            // 
+            this.txtTable.Location = new System.Drawing.Point(126, 250);
+            this.txtTable.Name = "txtTable";
+            this.txtTable.Size = new System.Drawing.Size(20, 20);
+            this.txtTable.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +215,7 @@
         private System.Windows.Forms.TextBox txtpSize;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtTable;
     }
 }
 

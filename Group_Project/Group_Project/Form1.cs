@@ -63,12 +63,14 @@ namespace Group_Project
 
                     dailyCustomers += size;
 
+                   
                     //create new Customer object here. Can add objects to listbox
                     string partyWait = partyName + " " + size.ToString();
 
                     //add Customer object to listbox
-                    lstWaitList.Items.Add(currentParty);
+                    lstWaitList.Items.Add(partyWait);
 
+                   
                     txtpName.Clear();
                     txtpSize.Clear();
                 }
@@ -121,14 +123,28 @@ namespace Group_Project
 
         }
 
+        public void LoadCustInfo(string waitList, string waitStaff)
+        {
+            waitList = (string)lstWaitList.SelectedItem;
+
+            waitStaff = (string)lstServers.SelectedItem;
+        }
+
         private void btnPartiesAssign_Click(object sender, EventArgs e)
         {
-            string party = (string) lstWaitList.SelectedItem;
+            string waitList = (string)lstWaitList.SelectedItem;
 
-            assignParty.Customer_Table(party);
+            string waitStaff = (string)lstServers.SelectedItem;
+
+            
+            int  table = Convert.ToInt16(txtTable.Text);
+                
+            assignParty.AssignTable(waitList, waitStaff, table);
 
             lstWaitList.Items.Remove(lstWaitList.SelectedItem);
-            
+
+
+
         }
 
         
