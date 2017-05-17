@@ -37,7 +37,7 @@ namespace Group_Project
         {
             Serv = serv1;
         }
-        public void Update()
+        public void TUpdate()
         {
             this.Text = Party.ToString() + "\n" + Serv.ToString();
         }        

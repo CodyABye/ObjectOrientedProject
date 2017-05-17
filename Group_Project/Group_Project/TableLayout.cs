@@ -66,6 +66,9 @@ namespace Group_Project
 
         private void TableLayout_Click(object sender, EventArgs e)
         {
+            //this.AssignCustomer(somecustomer);
+            //this.AssignServer(someserver);
+            //this.TUpdate();
             
         }
     }
