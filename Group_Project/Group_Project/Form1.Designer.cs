@@ -181,7 +181,7 @@
             this.btnShowReport.TabIndex = 8;
             this.btnShowReport.Text = "Customer Report";
             this.btnShowReport.UseVisualStyleBackColor = true;
-            this.btnShowReport.Click += new System.EventHandler(this.button1_Click);
+            this.btnShowReport.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // pnlTables
             // 
