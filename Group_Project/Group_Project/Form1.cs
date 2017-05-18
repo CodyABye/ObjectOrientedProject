@@ -25,6 +25,7 @@ namespace Group_Project
         private int partySize = 0;
         private int tableNum = 0;
         CustomerReport c;
+        RestServer newServ;
 
         int dailyCustomers = 0;
         string errorMessage = "";
@@ -45,8 +46,17 @@ namespace Group_Project
 
         private void BtnServerAdd_Click(object sender, EventArgs e)
         {
-            AddServer addServer = new AddServer();
-            addServer.Show();
+            string serverName = "";
+            int serverID = 0;
+            using(AddServer addServer = new AddServer())
+            {
+                if(addServer.ShowDialog() == DialogResult.OK)
+                {
+                    serverName = addServer.ServerName;
+                    serverID = addServer.ServerID;                    
+                }
+            }
+            newServ = new RestServer(serverID, serverName);
         }
 
         private void BtnPartiesAdd_Click(object sender, EventArgs e)

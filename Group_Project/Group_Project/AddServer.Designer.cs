@@ -101,6 +101,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddServer";
             this.Text = "AddServer";
+            this.Load += new System.EventHandler(this.AddServer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

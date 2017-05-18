@@ -16,13 +16,19 @@ namespace Group_Project
         {
             InitializeComponent();
         }
-
+        public string ServerName { get; set; }
+        public int ServerID { get; set; }
         private void btnServerAssign_Click(object sender, EventArgs e)
-        {
-            RestServer newServer = new RestServer(Convert.ToInt32(txtServerID.Text), txtServerName.Text);
-            Form1 frm = new Form1();
-            string serverName = txtServerName.Text;
+        {              
+            ServerName = txtServerName.Text;
+            ServerID = Convert.ToInt32(txtServerID.Text);
+            this.Close();
             //frm.lstServers.Items.Add(serverName.ToString());
+        }
+
+        private void AddServer_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
