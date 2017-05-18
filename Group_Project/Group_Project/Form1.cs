@@ -57,6 +57,7 @@ namespace Group_Project
                 }
             }
             newServ = new RestServer(serverID, serverName);
+            lstServers.Items.Add(newServ);
         }
 
         private void BtnPartiesAdd_Click(object sender, EventArgs e)
