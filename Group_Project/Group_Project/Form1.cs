@@ -24,12 +24,14 @@ namespace Group_Project
         private string servers = "";
         private int partySize = 0;
         private int tableNum = 0;
+        CustomerReport c;
 
         int dailyCustomers = 0;
         string errorMessage = "";
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            c = new CustomerReport();
             tl = new TableLayout(pnlTables);
             tl.Start();
 
@@ -170,10 +172,11 @@ namespace Group_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //we'll call this method elsewhere, but it works
+            //c.AddToCustomerTotal(3);
             CReport cr = new CReport();
-            cr.Show();
-            CustomerReport c = new CustomerReport();
             cr.lblReport.Text = c.ToString();
+            cr.Show();
         }
     }
 }

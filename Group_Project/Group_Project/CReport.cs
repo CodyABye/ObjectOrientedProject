@@ -17,6 +17,9 @@ namespace Group_Project
             InitializeComponent();
         }
 
-
+        private void CReport_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
