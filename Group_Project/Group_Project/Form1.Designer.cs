@@ -33,7 +33,6 @@
             this.btnServerAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grpParties = new System.Windows.Forms.GroupBox();
-            this.btnShowReport = new System.Windows.Forms.Button();
             this.txtTable = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.lstWaitList = new System.Windows.Forms.ListBox();
             this.btnPartiesAssign = new System.Windows.Forms.Button();
             this.btnPartiesAdd = new System.Windows.Forms.Button();
+            this.btnShowReport = new System.Windows.Forms.Button();
             this.pnlTables = new System.Windows.Forms.Panel();
             this.grpServers.SuspendLayout();
             this.grpParties.SuspendLayout();
@@ -104,16 +104,6 @@
             this.grpParties.TabIndex = 2;
             this.grpParties.TabStop = false;
             this.grpParties.Text = "Wait List";
-            // 
-            // btnShowReport
-            // 
-            this.btnShowReport.Location = new System.Drawing.Point(1017, 536);
-            this.btnShowReport.Name = "btnShowReport";
-            this.btnShowReport.Size = new System.Drawing.Size(102, 23);
-            this.btnShowReport.TabIndex = 8;
-            this.btnShowReport.Text = "Customer Report";
-            this.btnShowReport.UseVisualStyleBackColor = true;
-            this.btnShowReport.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtTable
             // 
@@ -182,6 +172,16 @@
             this.btnPartiesAdd.Text = "Add to wait list";
             this.btnPartiesAdd.UseVisualStyleBackColor = true;
             this.btnPartiesAdd.Click += new System.EventHandler(this.BtnPartiesAdd_Click);
+            // 
+            // btnShowReport
+            // 
+            this.btnShowReport.Location = new System.Drawing.Point(1017, 536);
+            this.btnShowReport.Name = "btnShowReport";
+            this.btnShowReport.Size = new System.Drawing.Size(102, 23);
+            this.btnShowReport.TabIndex = 8;
+            this.btnShowReport.Text = "Customer Report";
+            this.btnShowReport.UseVisualStyleBackColor = true;
+            this.btnShowReport.Click += new System.EventHandler(this.button1_Click);
             // 
             // pnlTables
             // 
