@@ -34,42 +34,7 @@ namespace Group_Project
             set { tableBoard = value; }
         }
 
-        public void Start()
-        {
-            BuildBoard();
-        }
-
         
-
-        private void BuildBoard()
-        {
-            int startLeft = 30;
-            int startTop = 10;
-            int tableName = 1;
-
-            for (int row = 0; row <= tableArray.GetUpperBound(0); row++)
-            {
-                for (int col = 0; col <= tableArray.GetUpperBound(1); col++)
-                {
-                    tableArray[row, col] = new Table();
-                    tableArray[row, col].Location = new System.Drawing.Point(startLeft + (col * 175), startTop + (row * 120));
-                    tableArray[row, col].Tag = tableName;
-                    tableArray[row, col].Height = 90;
-                    tableArray[row, col].Width = 120;
-                    tableArray[row, col].Text = "Table " + tableName;
-                    
-
-                    //incremented tableName after assignment of .Tag and .Text so tableName would be the same in both.
-
-                    ++tableName;
-
-                    tableBoard.Controls.Add(tableArray[row, col]);
-
-                    tableArray[row, col].Click += TableLayout_Click;
-
-                }
-            }
-        }
 
         public void Customer_Table(string party, string server, int tableNumber, int size)
         {

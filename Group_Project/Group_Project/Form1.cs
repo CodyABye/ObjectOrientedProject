@@ -21,7 +21,7 @@ namespace Group_Project
         TableLayout assignParty = new TableLayout();
         private string partyTable;
         private string serverTable;
-        Table[,] tableArray = new Table[4, 4];
+        Button[,] tableArray = new Button[4, 4];
 
         private string customers = "";
         private string servers = "";
@@ -37,10 +37,10 @@ namespace Group_Project
         {
             c = new CustomerReport();
             tl = new TableLayout(pnlTables);
-            tl.Start();
+            Start();
 
-            lstServers.Items.Add("Jack");
-            lstServers.Items.Add("Sue");
+            lstServers.Items.Add(new RestServer(15, "Andy"));
+            lstWaitList.Items.Add(new Customer("Jack", 6))
             lstServers.SelectedIndex = lstServers.TopIndex;
             //listBox2.Items.Add("Name 2");
             //listBox2.Items.Add("Name 3");
@@ -76,17 +76,8 @@ namespace Group_Project
             {
                 if (isInt(txtpSize.Text))
                 {
-                    partySize = 0;
-                    Customer currentParty = new Customer(txtpName.Text, Convert.ToInt32(txtpSize.Text));
-                    string partyName = txtpName.Text;
-
-                    partySize = int.Parse(txtpSize.Text);
-
-                    dailyCustomers += partySize;
-
-                    //assignParty.Customer_Table();
-                    //create new Customer object here. Can add objects to listbox
-                    string partyWait = partyName + " " + partySize.ToString();
+                    
+                    Customer partyWait = new Customer(txtpName.Text, Convert.ToInt32(txtpSize.Text));
 
                     //add Customer object to listbox
                     lstWaitList.Items.Add(partyWait);
@@ -138,11 +129,11 @@ namespace Group_Project
         {
             //listBox2.Items.Add(listBox1.SelectedItem);
 
-            string server = (string)lstServers.SelectedItem;
-            string customer = (string)lstWaitList.SelectedItem;
-            int size = partySize;
+            //string server = (string)lstServers.SelectedItem;
+            //string customer = (string)lstWaitList.SelectedItem;
+            //int size = partySize;
 
-            assignParty.Customer_Table(customer, server, size);
+            //assignParty.Customer_Table(customer, server, size);
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -186,6 +177,49 @@ namespace Group_Project
 
         //-------------------------------------------------------------------------------------------------------------
         //taken from table layout to access tables 
+        public void Start()
+        {
+            BuildBoard();
+        }
+        private void BuildBoard()
+        {
+            int startLeft = 30;
+            int startTop = 10;
+            int tableName = 1;
+
+            for (int row = 0; row <= tableArray.GetUpperBound(0); row++)
+            {
+                for (int col = 0; col <= tableArray.GetUpperBound(1); col++)
+                {
+                    tableArray[row, col] = new Button();
+                    tableArray[row, col].Location = new System.Drawing.Point(startLeft + (col * 175), startTop + (row * 120));
+                    tableArray[row, col].Tag = new Table();
+                    tableArray[row, col].Height = 90;
+                    tableArray[row, col].Width = 120;
+                    tableArray[row, col].Text = "Table " + tableName;
+
+
+                    //incremented tableName after assignment of .Tag and .Text so tableName would be the same in both.
+
+                    ++tableName;
+
+                    pnlTables.Controls.Add(tableArray[row, col]);
+
+                    tableArray[row, col].Click += Form1_Click;
+
+                }
+            }
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            //THE PROBLEM IS HERE!!!
+            Button s = (Button)sender;
+            Table t = new Table();
+            t.Serv = (RestServer)lstServers.SelectedItem;
+            t.AssignCustomer((Customer)lstWaitList.SelectedItem);
+            s.Text = t.ToString();
+        }
 
         public void AssignTable(string party, string server, int tableNumber)
         {
