@@ -172,7 +172,7 @@ namespace Group_Project
         {
             CReport cr = new CReport();
             cr.Show();
-            Customer c = new Customer();
+            CustomerReport c = new CustomerReport();
             cr.lblReport.Text = c.ToString();
         }
     }
