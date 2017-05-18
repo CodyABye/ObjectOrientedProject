@@ -19,6 +19,9 @@ namespace Group_Project
 
         TableLayout tl = null;
         TableLayout assignParty = new TableLayout();
+        private string partyTable;
+        private string serverTable;
+        Table[,] tableArray = new Table[4, 4];
 
         private string customers = "";
         private string servers = "";
@@ -171,7 +174,7 @@ namespace Group_Project
             if (isInt(txtTable.Text))
             {
                 int table = Convert.ToInt16(txtTable.Text);
-                assignParty.AssignTable(waitList, waitStaff, table);
+                AssignTable(waitList, waitStaff, table);
                 lstWaitList.Items.Remove(lstWaitList.SelectedItem);
             }
             else
@@ -179,6 +182,32 @@ namespace Group_Project
                 MessageBox.Show("Please enter a valid integer for table number");
                 txtTable.Focus();
             }
+        }
+
+        //-------------------------------------------------------------------------------------------------------------
+        //taken from table layout to access tables 
+
+        public void AssignTable(string party, string server, int tableNumber)
+        {
+            partyTable = party;
+            serverTable = server;
+            tableNum = tableNumber;
+            //Table[,] tArray = new Table[4, 4];
+
+            for (int row = 0; row <= tableArray.GetUpperBound(0); row++)
+            {
+                for (int col = 0; col <= tableArray.GetUpperBound(1); col++)
+                {
+                    if (tableNum == (int)tableArray[row, col].Tag)
+                    {
+                        tableArray[row, col].Text = "Table " + tableNum + "\n" + partyTable + "\n" + serverTable;
+
+
+                    }
+                }
+
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -116,6 +116,7 @@ namespace Group_Project
 
         }
 
+        /*
         public void AssignTable(string party ,string server, int tableNumber)
         {
             partyTable = party;
@@ -137,7 +138,7 @@ namespace Group_Project
 
             }
 
-        }
+        }*/
     }
 }
 
