@@ -19,7 +19,10 @@ namespace Group_Project
 
         private void btnServerAssign_Click(object sender, EventArgs e)
         {
-
+            RestServer newServer = new RestServer(Convert.ToInt32(txtServerID.Text), txtServerName.Text);
+            Form1 frm = new Form1();
+            string serverName = txtServerName.Text;
+            //frm.lstServers.Items.Add(serverName.ToString());
         }
     }
 }

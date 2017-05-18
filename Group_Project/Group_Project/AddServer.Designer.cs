@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtServerFirstName = new System.Windows.Forms.TextBox();
-            this.txtServerLastName = new System.Windows.Forms.TextBox();
+            this.txtServerName = new System.Windows.Forms.TextBox();
             this.btnServerAssign = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtServerID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -51,36 +51,20 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(112, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "First Name";
+            this.label2.Text = "Name";
             // 
-            // label3
+            // txtServerName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(112, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Last Name";
-            // 
-            // txtServerFirstName
-            // 
-            this.txtServerFirstName.Location = new System.Drawing.Point(207, 96);
-            this.txtServerFirstName.Name = "txtServerFirstName";
-            this.txtServerFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtServerFirstName.TabIndex = 3;
-            // 
-            // txtServerLastName
-            // 
-            this.txtServerLastName.Location = new System.Drawing.Point(207, 125);
-            this.txtServerLastName.Name = "txtServerLastName";
-            this.txtServerLastName.Size = new System.Drawing.Size(100, 20);
-            this.txtServerLastName.TabIndex = 4;
+            this.txtServerName.Location = new System.Drawing.Point(207, 96);
+            this.txtServerName.Name = "txtServerName";
+            this.txtServerName.Size = new System.Drawing.Size(100, 20);
+            this.txtServerName.TabIndex = 3;
             // 
             // btnServerAssign
             // 
-            this.btnServerAssign.Location = new System.Drawing.Point(156, 172);
+            this.btnServerAssign.Location = new System.Drawing.Point(168, 172);
             this.btnServerAssign.Name = "btnServerAssign";
             this.btnServerAssign.Size = new System.Drawing.Size(75, 23);
             this.btnServerAssign.TabIndex = 5;
@@ -88,14 +72,30 @@
             this.btnServerAssign.UseVisualStyleBackColor = true;
             this.btnServerAssign.Click += new System.EventHandler(this.btnServerAssign_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(112, 128);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Server ID";
+            // 
+            // txtServerID
+            // 
+            this.txtServerID.Location = new System.Drawing.Point(207, 125);
+            this.txtServerID.Name = "txtServerID";
+            this.txtServerID.Size = new System.Drawing.Size(100, 20);
+            this.txtServerID.TabIndex = 4;
+            // 
             // AddServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 251);
             this.Controls.Add(this.btnServerAssign);
-            this.Controls.Add(this.txtServerLastName);
-            this.Controls.Add(this.txtServerFirstName);
+            this.Controls.Add(this.txtServerID);
+            this.Controls.Add(this.txtServerName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -110,9 +110,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtServerFirstName;
-        private System.Windows.Forms.TextBox txtServerLastName;
+        private System.Windows.Forms.TextBox txtServerName;
         private System.Windows.Forms.Button btnServerAssign;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtServerID;
     }
 }
