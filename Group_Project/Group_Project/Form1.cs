@@ -22,6 +22,7 @@ namespace Group_Project
         private string partyTable;
         private string serverTable;
         Button[,] tableArray = new Button[4, 4];
+        RestServer[,] busyServers = new RestServer[4, 4];
 
         private string customers = "";
         private string servers = "";
@@ -213,13 +214,13 @@ namespace Group_Project
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            //THE PROBLEM IS HERE!!!
             Button s = (Button)sender;
             Table t = new Table();
-            t.Serv = (RestServer)lstServers.SelectedItem;
+            t.Serv = (RestServer)lstServers.SelectedItem;            
             t.AssignCustomer((Customer)lstWaitList.SelectedItem);
             s.Text = t.Party.ToString() + "\n" + t.Serv.ToString();
             c.AddToCustomerTotal(t.Party.PartySize);
+            lstWaitList.Items.Remove(lstWaitList.SelectedItem);
             //s.Text = t.ToString();
         }
 
