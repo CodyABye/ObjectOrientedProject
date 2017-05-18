@@ -167,5 +167,13 @@ namespace Group_Project
                 txtTable.Focus();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CReport cr = new CReport();
+            cr.Show();
+            Customer c = new Customer();
+            cr.lblReport.Text = c.ToString();
+        }
     }
 }
