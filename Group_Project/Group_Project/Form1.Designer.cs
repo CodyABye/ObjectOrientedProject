@@ -33,15 +33,14 @@
             this.btnServerAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grpParties = new System.Windows.Forms.GroupBox();
-            this.txtTable = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnShowReport = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtpSize = new System.Windows.Forms.TextBox();
             this.txtpName = new System.Windows.Forms.TextBox();
             this.lstWaitList = new System.Windows.Forms.ListBox();
-            this.btnPartiesAssign = new System.Windows.Forms.Button();
             this.btnPartiesAdd = new System.Windows.Forms.Button();
-            this.btnShowReport = new System.Windows.Forms.Button();
             this.pnlTables = new System.Windows.Forms.Panel();
             this.grpServers.SuspendLayout();
             this.grpParties.SuspendLayout();
@@ -90,13 +89,13 @@
             // 
             // grpParties
             // 
-            this.grpParties.Controls.Add(this.txtTable);
+            this.grpParties.Controls.Add(this.btnClear);
+            this.grpParties.Controls.Add(this.btnShowReport);
             this.grpParties.Controls.Add(this.label3);
             this.grpParties.Controls.Add(this.label2);
             this.grpParties.Controls.Add(this.txtpSize);
             this.grpParties.Controls.Add(this.txtpName);
             this.grpParties.Controls.Add(this.lstWaitList);
-            this.grpParties.Controls.Add(this.btnPartiesAssign);
             this.grpParties.Controls.Add(this.btnPartiesAdd);
             this.grpParties.Location = new System.Drawing.Point(739, 268);
             this.grpParties.Name = "grpParties";
@@ -105,12 +104,24 @@
             this.grpParties.TabStop = false;
             this.grpParties.Text = "Wait List";
             // 
-            // txtTable
+            // btnClear
             // 
-            this.txtTable.Location = new System.Drawing.Point(126, 250);
-            this.txtTable.Name = "txtTable";
-            this.txtTable.Size = new System.Drawing.Size(20, 20);
-            this.txtTable.TabIndex = 7;
+            this.btnClear.Location = new System.Drawing.Point(125, 250);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(110, 23);
+            this.btnClear.TabIndex = 9;
+            this.btnClear.Text = "Clear Tables";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click_1);
+            // 
+            // btnShowReport
+            // 
+            this.btnShowReport.Location = new System.Drawing.Point(9, 250);
+            this.btnShowReport.Name = "btnShowReport";
+            this.btnShowReport.Size = new System.Drawing.Size(110, 23);
+            this.btnShowReport.TabIndex = 8;
+            this.btnShowReport.Text = "Customer Report";
+            this.btnShowReport.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -132,16 +143,16 @@
             // 
             // txtpSize
             // 
-            this.txtpSize.Location = new System.Drawing.Point(121, 186);
+            this.txtpSize.Location = new System.Drawing.Point(91, 186);
             this.txtpSize.Name = "txtpSize";
-            this.txtpSize.Size = new System.Drawing.Size(143, 20);
+            this.txtpSize.Size = new System.Drawing.Size(173, 20);
             this.txtpSize.TabIndex = 4;
             // 
             // txtpName
             // 
-            this.txtpName.Location = new System.Drawing.Point(121, 160);
+            this.txtpName.Location = new System.Drawing.Point(91, 160);
             this.txtpName.Name = "txtpName";
-            this.txtpName.Size = new System.Drawing.Size(143, 20);
+            this.txtpName.Size = new System.Drawing.Size(173, 20);
             this.txtpName.TabIndex = 3;
             // 
             // lstWaitList
@@ -153,16 +164,6 @@
             this.lstWaitList.Size = new System.Drawing.Size(257, 134);
             this.lstWaitList.TabIndex = 2;
             // 
-            // btnPartiesAssign
-            // 
-            this.btnPartiesAssign.Location = new System.Drawing.Point(9, 250);
-            this.btnPartiesAssign.Name = "btnPartiesAssign";
-            this.btnPartiesAssign.Size = new System.Drawing.Size(110, 23);
-            this.btnPartiesAssign.TabIndex = 1;
-            this.btnPartiesAssign.Text = "Assign to Table";
-            this.btnPartiesAssign.UseVisualStyleBackColor = true;
-            this.btnPartiesAssign.Click += new System.EventHandler(this.btnPartiesAssign_Click);
-            // 
             // btnPartiesAdd
             // 
             this.btnPartiesAdd.Location = new System.Drawing.Point(9, 221);
@@ -172,16 +173,6 @@
             this.btnPartiesAdd.Text = "Add to wait list";
             this.btnPartiesAdd.UseVisualStyleBackColor = true;
             this.btnPartiesAdd.Click += new System.EventHandler(this.BtnPartiesAdd_Click);
-            // 
-            // btnShowReport
-            // 
-            this.btnShowReport.Location = new System.Drawing.Point(1017, 536);
-            this.btnShowReport.Name = "btnShowReport";
-            this.btnShowReport.Size = new System.Drawing.Size(102, 23);
-            this.btnShowReport.TabIndex = 8;
-            this.btnShowReport.Text = "Customer Report";
-            this.btnShowReport.UseVisualStyleBackColor = true;
-            this.btnShowReport.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // pnlTables
             // 
@@ -196,7 +187,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1131, 583);
-            this.Controls.Add(this.btnShowReport);
             this.Controls.Add(this.pnlTables);
             this.Controls.Add(this.grpParties);
             this.Controls.Add(this.label1);
@@ -218,7 +208,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpParties;
         private System.Windows.Forms.Button btnServerAdd;
-        private System.Windows.Forms.Button btnPartiesAssign;
         private System.Windows.Forms.Button btnPartiesAdd;
         private System.Windows.Forms.ListBox lstServers;
         private System.Windows.Forms.Panel pnlTables;
@@ -227,8 +216,8 @@
         private System.Windows.Forms.TextBox txtpSize;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTable;
         private System.Windows.Forms.Button btnShowReport;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 
