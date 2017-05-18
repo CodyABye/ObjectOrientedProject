@@ -40,7 +40,7 @@ namespace Group_Project
             Start();
 
             lstServers.Items.Add(new RestServer(15, "Andy"));
-            lstWaitList.Items.Add(new Customer("Jack", 6))
+            lstWaitList.Items.Add(new Customer("Jack", 6));
             lstServers.SelectedIndex = lstServers.TopIndex;
             //listBox2.Items.Add("Name 2");
             //listBox2.Items.Add("Name 3");
@@ -218,7 +218,9 @@ namespace Group_Project
             Table t = new Table();
             t.Serv = (RestServer)lstServers.SelectedItem;
             t.AssignCustomer((Customer)lstWaitList.SelectedItem);
-            s.Text = t.ToString();
+            s.Text = t.Party.ToString() + "\n" + t.Serv.ToString();
+            c.AddToCustomerTotal(t.Party.PartySize);
+            //s.Text = t.ToString();
         }
 
         public void AssignTable(string party, string server, int tableNumber)
