@@ -23,6 +23,7 @@ namespace Group_Project
             ServerName = txtServerName.Text;
             ServerID = Convert.ToInt32(txtServerID.Text);
             this.DialogResult = DialogResult.OK;
+            this.Close();
             //frm.lstServers.Items.Add(serverName.ToString());
         }
 
