@@ -147,27 +147,25 @@ namespace Group_Project
         public void LoadCustInfo(string waitList, string waitStaff)
         {
             waitList = (string)lstWaitList.SelectedItem;
-
             waitStaff = (string)lstServers.SelectedItem;
         }
 
         private void btnPartiesAssign_Click(object sender, EventArgs e)
         {
             string waitList = (string)lstWaitList.SelectedItem;
-
             string waitStaff = (string)lstServers.SelectedItem;
 
-            
-            int  table = Convert.ToInt16(txtTable.Text);
-                
-            assignParty.AssignTable(waitList, waitStaff, table);
-
-            lstWaitList.Items.Remove(lstWaitList.SelectedItem);
-
-
-
+            if (isInt(txtTable.Text))
+            {
+                int table = Convert.ToInt16(txtTable.Text);
+                assignParty.AssignTable(waitList, waitStaff, table);
+                lstWaitList.Items.Remove(lstWaitList.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid integer for table number");
+                txtTable.Focus();
+            }
         }
-
-        
     }
 }
