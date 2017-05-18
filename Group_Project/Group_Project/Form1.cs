@@ -22,7 +22,6 @@ namespace Group_Project
         private string partyTable;
         private string serverTable;
         Button[,] tableArray = new Button[4, 4];
-        RestServer[,] busyServers = new RestServer[4, 4];
 
         private string customers = "";
         private string servers = "";
@@ -52,12 +51,12 @@ namespace Group_Project
         {
             string serverName = "";
             int serverID = 0;
-            using(AddServer addServer = new AddServer())
+            using (AddServer addServer = new AddServer())
             {
-                if(addServer.ShowDialog() == DialogResult.OK)
+                if (addServer.ShowDialog() == DialogResult.OK)
                 {
                     serverName = addServer.ServerName;
-                    serverID = addServer.ServerID;                    
+                    serverID = addServer.ServerID;
                 }
             }
             newServ = new RestServer(serverID, serverName);
@@ -77,13 +76,13 @@ namespace Group_Project
             {
                 if (isInt(txtpSize.Text))
                 {
-                    
+
                     Customer partyWait = new Customer(txtpName.Text, Convert.ToInt32(txtpSize.Text));
 
                     //add Customer object to listbox
                     lstWaitList.Items.Add(partyWait);
 
-                   
+
                     txtpName.Clear();
                     txtpSize.Clear();
                 }
@@ -160,28 +159,27 @@ namespace Group_Project
 
         private void btnPartiesAssign_Click(object sender, EventArgs e)
         {
-            string waitList = (string)lstWaitList.SelectedItem;
-            string waitStaff = (string)lstServers.SelectedItem;
+            //string waitList = (string)lstWaitList.SelectedItem;
+            //string waitStaff = (string)lstServers.SelectedItem;
 
-            if (isInt(txtTable.Text))
-            {
-                int table = Convert.ToInt16(txtTable.Text);
-                AssignTable(waitList, waitStaff, table);
-                lstWaitList.Items.Remove(lstWaitList.SelectedItem);
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid integer for table number");
-                txtTable.Focus();
-            }
+            //if (isInt(txtTable.Text))
+            //{
+            //    int table = Convert.ToInt16(txtTable.Text);
+            //    AssignTable(waitList, waitStaff, table);
+            //    lstWaitList.Items.Remove(lstWaitList.SelectedItem);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please enter a valid integer for table number");
+            //    txtTable.Focus();
+            //}
         }
 
-        //-------------------------------------------------------------------------------------------------------------
-        //taken from table layout to access tables 
         public void Start()
         {
             BuildBoard();
         }
+
         private void BuildBoard()
         {
             int startLeft = 30;
@@ -214,13 +212,13 @@ namespace Group_Project
 
         private void Form1_Click(object sender, EventArgs e)
         {
+            //THE PROBLEM IS HERE!!!
             Button s = (Button)sender;
             Table t = new Table();
-            t.Serv = (RestServer)lstServers.SelectedItem;            
+            t.Serv = (RestServer)lstServers.SelectedItem;
             t.AssignCustomer((Customer)lstWaitList.SelectedItem);
             s.Text = t.Party.ToString() + "\n" + t.Serv.ToString();
             c.AddToCustomerTotal(t.Party.PartySize);
-            lstWaitList.Items.Remove(lstWaitList.SelectedItem);
             //s.Text = t.ToString();
         }
 
@@ -247,13 +245,20 @@ namespace Group_Project
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnShowReport_Click(object sender, EventArgs e)
         {
             //we'll call this method elsewhere, but it works
             //c.AddToCustomerTotal(3);
             CReport cr = new CReport();
             cr.lblReport.Text = c.ToString();
             cr.Show();
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            tl.TableBoard.Controls.Clear();
+            Start();
         }
     }
 }
