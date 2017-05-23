@@ -42,6 +42,7 @@ namespace Group_Project
             lstServers.Items.Add(new RestServer(15, "Andy"));
             lstWaitList.Items.Add(new Customer("Jack", 6));
             lstServers.SelectedIndex = lstServers.TopIndex;
+            lstWaitList.SelectedIndex = lstWaitList.TopIndex;
             //listBox2.Items.Add("Name 2");
             //listBox2.Items.Add("Name 3");
 
@@ -192,7 +193,7 @@ namespace Group_Project
                 {
                     tableArray[row, col] = new Button();
                     tableArray[row, col].Location = new System.Drawing.Point(startLeft + (col * 175), startTop + (row * 120));
-                    tableArray[row, col].Tag = new Table();
+                    tableArray[row, col].Tag = new Table(tableName);
                     tableArray[row, col].Height = 90;
                     tableArray[row, col].Width = 120;
                     tableArray[row, col].Text = "Table " + tableName;
@@ -212,14 +213,39 @@ namespace Group_Project
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            //THE PROBLEM IS HERE!!!
             Button s = (Button)sender;
-            Table t = new Table();
-            t.Serv = (RestServer)lstServers.SelectedItem;
-            t.AssignCustomer((Customer)lstWaitList.SelectedItem);
-            s.Text = t.Party.ToString() + "\n" + t.Serv.ToString();
-            c.AddToCustomerTotal(t.Party.PartySize);
-            //s.Text = t.ToString();
+            Table t = (Table)s.Tag;
+            if (chkRemove.Checked)
+            {
+                s.Text = "Table " + Convert.ToString(t.TableID);
+            }
+            else
+            {
+                t.Serv = (RestServer)lstServers.SelectedItem;
+                t.AssignCustomer((Customer)lstWaitList.SelectedItem);
+                s.Text = t.Party.ToString() + "\n" + t.Serv.ToString();
+                c.AddToCustomerTotal(t.Party.PartySize);
+                lstWaitList.Items.Remove(lstWaitList.SelectedItem);
+                //s.Text = t.ToString();
+            }
+
+        }
+        private void chkRemove_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkRemove.Checked)
+            {
+                lstWaitList.Enabled = false;
+                lstServers.Enabled = false;
+                btnPartiesAdd.Enabled = false;
+                btnServerAdd.Enabled = false;
+            }
+            else
+            {
+                lstWaitList.Enabled = true;
+                lstServers.Enabled = true;
+                btnPartiesAdd.Enabled = true;
+                btnServerAdd.Enabled = true;
+            }
         }
 
         public void AssignTable(string party, string server, int tableNumber)
@@ -255,10 +281,11 @@ namespace Group_Project
 
         }
 
-        private void btnClear_Click_1(object sender, EventArgs e)
+        private void btnShowReport_Click_1(object sender, EventArgs e)
         {
-            tl.TableBoard.Controls.Clear();
-            Start();
+            CReport cr = new CReport();
+            cr.lblReport.Text = c.ToString();
+            cr.Show();
         }
     }
 }

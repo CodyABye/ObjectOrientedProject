@@ -33,15 +33,15 @@
             this.btnServerAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grpParties = new System.Windows.Forms.GroupBox();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnShowReport = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtpSize = new System.Windows.Forms.TextBox();
             this.txtpName = new System.Windows.Forms.TextBox();
             this.lstWaitList = new System.Windows.Forms.ListBox();
             this.btnPartiesAdd = new System.Windows.Forms.Button();
+            this.btnShowReport = new System.Windows.Forms.Button();
             this.pnlTables = new System.Windows.Forms.Panel();
+            this.chkRemove = new System.Windows.Forms.CheckBox();
             this.grpServers.SuspendLayout();
             this.grpParties.SuspendLayout();
             this.SuspendLayout();
@@ -89,39 +89,18 @@
             // 
             // grpParties
             // 
-            this.grpParties.Controls.Add(this.btnClear);
-            this.grpParties.Controls.Add(this.btnShowReport);
             this.grpParties.Controls.Add(this.label3);
             this.grpParties.Controls.Add(this.label2);
             this.grpParties.Controls.Add(this.txtpSize);
             this.grpParties.Controls.Add(this.txtpName);
             this.grpParties.Controls.Add(this.lstWaitList);
             this.grpParties.Controls.Add(this.btnPartiesAdd);
-            this.grpParties.Location = new System.Drawing.Point(739, 268);
+            this.grpParties.Location = new System.Drawing.Point(739, 307);
             this.grpParties.Name = "grpParties";
-            this.grpParties.Size = new System.Drawing.Size(270, 291);
+            this.grpParties.Size = new System.Drawing.Size(270, 252);
             this.grpParties.TabIndex = 2;
             this.grpParties.TabStop = false;
             this.grpParties.Text = "Wait List";
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(125, 250);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(110, 23);
-            this.btnClear.TabIndex = 9;
-            this.btnClear.Text = "Clear Tables";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click_1);
-            // 
-            // btnShowReport
-            // 
-            this.btnShowReport.Location = new System.Drawing.Point(9, 250);
-            this.btnShowReport.Name = "btnShowReport";
-            this.btnShowReport.Size = new System.Drawing.Size(110, 23);
-            this.btnShowReport.TabIndex = 8;
-            this.btnShowReport.Text = "Customer Report";
-            this.btnShowReport.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -143,16 +122,16 @@
             // 
             // txtpSize
             // 
-            this.txtpSize.Location = new System.Drawing.Point(91, 186);
+            this.txtpSize.Location = new System.Drawing.Point(121, 186);
             this.txtpSize.Name = "txtpSize";
-            this.txtpSize.Size = new System.Drawing.Size(173, 20);
+            this.txtpSize.Size = new System.Drawing.Size(143, 20);
             this.txtpSize.TabIndex = 4;
             // 
             // txtpName
             // 
-            this.txtpName.Location = new System.Drawing.Point(91, 160);
+            this.txtpName.Location = new System.Drawing.Point(121, 160);
             this.txtpName.Name = "txtpName";
-            this.txtpName.Size = new System.Drawing.Size(173, 20);
+            this.txtpName.Size = new System.Drawing.Size(143, 20);
             this.txtpName.TabIndex = 3;
             // 
             // lstWaitList
@@ -174,6 +153,16 @@
             this.btnPartiesAdd.UseVisualStyleBackColor = true;
             this.btnPartiesAdd.Click += new System.EventHandler(this.BtnPartiesAdd_Click);
             // 
+            // btnShowReport
+            // 
+            this.btnShowReport.Location = new System.Drawing.Point(1017, 536);
+            this.btnShowReport.Name = "btnShowReport";
+            this.btnShowReport.Size = new System.Drawing.Size(102, 23);
+            this.btnShowReport.TabIndex = 8;
+            this.btnShowReport.Text = "Customer Report";
+            this.btnShowReport.UseVisualStyleBackColor = true;
+            this.btnShowReport.Click += new System.EventHandler(this.btnShowReport_Click_1);
+            // 
             // pnlTables
             // 
             this.pnlTables.Location = new System.Drawing.Point(25, 65);
@@ -182,11 +171,25 @@
             this.pnlTables.Size = new System.Drawing.Size(693, 494);
             this.pnlTables.TabIndex = 3;
             // 
+            // chkRemove
+            // 
+            this.chkRemove.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkRemove.AutoSize = true;
+            this.chkRemove.Location = new System.Drawing.Point(1017, 65);
+            this.chkRemove.Name = "chkRemove";
+            this.chkRemove.Size = new System.Drawing.Size(81, 23);
+            this.chkRemove.TabIndex = 9;
+            this.chkRemove.Text = "Empty Tables";
+            this.chkRemove.UseVisualStyleBackColor = true;
+            this.chkRemove.CheckedChanged += new System.EventHandler(this.chkRemove_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1131, 583);
+            this.Controls.Add(this.chkRemove);
+            this.Controls.Add(this.btnShowReport);
             this.Controls.Add(this.pnlTables);
             this.Controls.Add(this.grpParties);
             this.Controls.Add(this.label1);
@@ -217,7 +220,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnShowReport;
-        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.CheckBox chkRemove;
     }
 }
 
