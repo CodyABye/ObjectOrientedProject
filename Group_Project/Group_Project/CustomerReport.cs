@@ -15,11 +15,23 @@ namespace Group_Project
         }
         public void AddToCustomerTotal(int partySize)
         {
-            CustomerTotal += partySize;
+            if(partySize > 0)
+            {
+                CustomerTotal += partySize;
+            }
+            
         }
         public override string ToString()
         {
-            return "Report: Total Customers: " + CustomerTotal.ToString();
+            if (CustomerTotal > 0)
+            {
+                return "Report: Total Customers: " + CustomerTotal.ToString();
+            }
+            else
+            {
+                return "No Customers Currently";
+            }
+            
         }
     }
 }
