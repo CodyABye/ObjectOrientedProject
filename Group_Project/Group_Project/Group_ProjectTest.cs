@@ -85,11 +85,5 @@ namespace Group_Project
 
             Assert.IsTrue(isCorrectString);
         }
-        //tests for Table Class
-        [Test]
-        public void Table_AddServer()
-        {
-            
-        }
     }
 }

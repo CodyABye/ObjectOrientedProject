@@ -10,8 +10,8 @@ namespace Group_Project
 {
     class Table : Button
     {
-        public int TableID { get; set; }
-        public int Capacity { get; set; }
+        public int TableID { get;}
+        public int Capacity { get;}
         public Customer Party { get; set; }
         public RestServer Serv { get; set; }
 
@@ -29,8 +29,6 @@ namespace Group_Project
         {
             Party = cust1;
         }
-
-        
         public void AssignServer(RestServer serv1)
         {
             Serv = serv1;
