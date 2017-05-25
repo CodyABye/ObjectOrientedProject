@@ -14,7 +14,23 @@ namespace Group_Project
             
         }
         
+        //Test for Customer class
 
+        [Test]
+
+        public void TestTheCustomerConstructor()
+        {
+            Customer cust = new Group_Project.Customer("Jones", 5);
+
+            bool isFalse = true;
+
+            if(cust.Equals(null))
+            {
+                isFalse = false;
+            }
+
+            Assert.IsTrue(isFalse);
+        }
         
 
         //Tests for CustomerReportClass

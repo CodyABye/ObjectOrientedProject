@@ -19,10 +19,10 @@ namespace Group_Project
         public string PartyName { get; set; }
         public int PartySize { get; set; }
 
-        public Customer()
-            {
-                //default constructor
-            }
+        //public Customer()
+        //    {
+        //        //default constructor
+        //    }
 
         public Customer(string thePName, int thePSize)
         {
