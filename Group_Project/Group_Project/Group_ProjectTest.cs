@@ -7,11 +7,15 @@ namespace Group_Project
     class Group_ProjectTest
     {
         CustomerReport testCustomerReport = new CustomerReport();
+        Table tbl = new Table();
         
         public void Init()
         {
             
         }
+        
+
+        
 
         //Tests for CustomerReportClass
         //PartySize Setter Validation Test
@@ -64,6 +68,12 @@ namespace Group_Project
 
 
             Assert.IsTrue(isCorrectString);
+        }
+        //tests for Table Class
+        [Test]
+        public void Table_SetCapacity()
+        {
+            
         }
     }
 }
