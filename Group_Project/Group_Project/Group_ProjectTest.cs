@@ -71,7 +71,7 @@ namespace Group_Project
         }
         //tests for Table Class
         [Test]
-        public void Table_SetCapacity()
+        public void Table_AddServer()
         {
             
         }
