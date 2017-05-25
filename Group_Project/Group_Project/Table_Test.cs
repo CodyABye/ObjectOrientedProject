@@ -13,7 +13,37 @@ namespace Group_Project
 
         }
         [Test]
-        public void 
+        public void Table_AddServer()
+        {
+            bool isThere;
+            RestServer srv = new Group_Project.RestServer(1, "Nancy");
+            tbl.AssignServer(srv);
+            if (tbl.Serv != null)
+            {
+                isThere = true;
+            }
+            else
+            {
+                isThere = false;
+            }
+            Assert.IsTrue(isThere);
+        }
+        [Test]
+        public void Table_AddParty()
+        {
+            bool isThere;
+            Customer pty = new Group_Project.Customer("Smiths", 5);
+            tbl.AssignCustomer(pty);
+            if(tbl.Party != null)
+            {
+                isThere = true;
+            }
+            else
+            {
+                isThere = false;
+            }
+            Assert.IsTrue(isThere);
+        }
 
     }
 }
