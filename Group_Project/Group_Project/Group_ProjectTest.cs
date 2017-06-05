@@ -8,12 +8,12 @@ namespace Group_Project
     {
         CustomerReport testCustomerReport = new CustomerReport();
         Table tbl = new Table();
-        
+
         public void Init()
         {
-            
+
         }
-        
+
         //Test for Customer class
 
         [Test]
@@ -24,17 +24,34 @@ namespace Group_Project
 
             bool isFalse = true;
 
-            if(cust.Equals(null))
+            if (cust.Equals(null))
             {
                 isFalse = false;
             }
 
             Assert.IsTrue(isFalse);
         }
-        
+
+        [Test]
+
+        public void TestServer()
+        {
+            RestServer rs = new RestServer(2, "Ben");
+
+            bool isFalse = true;
+
+            if (rs.Equals(null))
+            {
+                isFalse = false;
+            }
+
+            Assert.IsTrue(isFalse);
+        }
+
 
         //Tests for CustomerReportClass
         //PartySize Setter Validation Test
+
         [Test]
         public void MakeCustomerReport_WithValidatedPartySize()
         {
@@ -54,7 +71,7 @@ namespace Group_Project
             {
                 isCorrectPartySize = false;
             }
-            
+
 
             Assert.IsTrue(isCorrectPartySize);
         }

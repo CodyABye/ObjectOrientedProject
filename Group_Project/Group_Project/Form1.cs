@@ -198,14 +198,14 @@ namespace Group_Project
                     tableArray[row, col].Width = 120;
                     tableArray[row, col].Text = "Table " + tableName;
 
-
                     //incremented tableName after assignment of .Tag and .Text so tableName would be the same in both.
-
                     ++tableName;
-
                     pnlTables.Controls.Add(tableArray[row, col]);
-
                     tableArray[row, col].Click += Form1_Click;
+
+                    //table image
+                    tableArray[row, col].Image = Image.FromFile(@"..\..\Images\table.jpg");
+                    tableArray[row, col].FlatStyle = FlatStyle.Flat;
 
                 }
             }
@@ -238,6 +238,7 @@ namespace Group_Project
                 lstServers.Enabled = false;
                 btnPartiesAdd.Enabled = false;
                 btnServerAdd.Enabled = false;
+                chkRemove.BackColor = Color.Red;
             }
             else
             {
@@ -245,6 +246,7 @@ namespace Group_Project
                 lstServers.Enabled = true;
                 btnPartiesAdd.Enabled = true;
                 btnServerAdd.Enabled = true;
+                chkRemove.BackColor = SystemColors.Control;
             }
         }
 
